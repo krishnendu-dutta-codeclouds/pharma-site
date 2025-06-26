@@ -29,7 +29,7 @@
 }
 
 // Variables
-$primary: #003C3C;
+$primary: #034a4c;
 $primary-dark: #1a6a6a;
 $accent: #00524d;
 $background: #f6ffff;
@@ -1013,7 +1013,7 @@ h1,h2,h3,h4,h5,h6 {
 .bestsellers-title {
     text-align: center;
     font-family: $font-main;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 400;
     color: $primary;
     margin: 0 0 40px 0;
@@ -1028,13 +1028,13 @@ h1,h2,h3,h4,h5,h6 {
 
 .bestseller-card {
     @include flex-center;
-    align-items: flex-end;
     background: #f7faf9;
     border-radius: 8px;
     box-shadow: none;
     overflow: hidden;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1096px;
+    width: 100%;
     min-height: 320px;
     
     flex-direction: row;
@@ -1042,7 +1042,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bestseller-image-col {
-    flex: 0 0 320px;
+    flex:0 0 50%;
     height: 100%;
     display: flex;
     align-items: flex-end;
@@ -1050,7 +1050,6 @@ h1,h2,h3,h4,h5,h6 {
     background: #f7faf9;
     min-width: 220px;
     padding: 0 0 0 0;
-    max-height: 360px;
 }
 
 .bestseller-image {
@@ -1066,24 +1065,30 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bestseller-info-col {
-    flex: 0 0 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 40px 60px;
     background: #f7faf9;
     min-width: 0;
 }
 
 .bestseller-badge {
     display: inline-block;
-    background: #eaf6f6;
+    background: #6DD7CF;
     color: $primary;
     font-size: 14px;
     font-weight: 600;
     border-radius: 16px;
-    padding: 4px 16px;
+    padding: 4px 10px;
     margin-bottom: 12px;
+    width: 120px;
+    @include flex-center;
+    gap:4px;
+    img{
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .bestseller-name {
@@ -2145,7 +2150,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .rnd-principles-title {
     text-align: left;
-    font-family: $font-main;
+    font-family: "Transducer Test Medium", Arial, sans-serif;
     font-size: 64px;
     font-weight: 400;
     color: #0b5a5a;
