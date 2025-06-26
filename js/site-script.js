@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 24,
         loop: true,
         navigation: {
-            nextEl: '.global-testimonials-swiper .swiper-button-next',
-            prevEl: '.global-testimonials-swiper .swiper-button-prev',
+            nextEl: '.global-testimonials-swiper > .swiper-button-next',
+            prevEl: '.global-testimonials-swiper > .swiper-button-prev',
         },
         grabCursor: true,
         breakpoints: {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 spaceBetween: 16,
             },
             0: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 8,
             }
         }
