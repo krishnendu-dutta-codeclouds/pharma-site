@@ -990,7 +990,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bestseller-image {
-  width: 100%;
+  max-width: 250px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -998,7 +998,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   border-radius: 4px;
   background: #f7faf9;
-  box-shadow: 0 8px 0 0 #ececec;
 }
 
 .bestseller-info-col {
