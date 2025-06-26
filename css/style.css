@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-banner .container .hero-content {
   position: relative;
   z-index: 2;
-  padding: 64px 0 64px 20px;
+  padding: 64px 0 64px 0;
   max-width: 700px;
   display: flex;
   flex-wrap: wrap;
@@ -165,6 +165,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #034a4c;
   letter-spacing: 0.01em;
   font-family: "Transducer Test Medium", sans-serif;
+}
+@media (max-width: 600px) {
+  .hero-banner .container .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
 }
 .hero-banner .container .hero-content .hero-subtitle {
   font-size: 20px;
@@ -209,6 +215,11 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   z-index: 1;
   pointer-events: none;
+}
+@media (max-width: 900px) {
+  .hero-banner .hero-bg {
+    opacity: 0.4;
+  }
 }
 
 .testimonial-section {
@@ -439,6 +450,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 .health-formulas-section {
