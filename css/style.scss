@@ -220,13 +220,16 @@ h1,h2,h3,h4,h5,h6 {
         }
 
         .hero-btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 388px;
             background: $accent;
             color: $white;
             font-size: 18px;
             font-weight: 500;
-            padding: 16px 36px;
+            padding: 12px 25px;
             border-radius: 8px;
             text-decoration: none;
             box-shadow: none;
@@ -340,8 +343,7 @@ h1,h2,h3,h4,h5,h6 {
 
                 .testimonial-name {
                     font-size: 15px;
-                    color: $primary;
-                    font-weight: 500;
+                    color: #898a8a;
                 }
             }
         }
@@ -521,18 +523,17 @@ h1,h2,h3,h4,h5,h6 {
 
 .health-formulas-section {
     background: $white;
-    padding: 56px 0 32px 0;
+    padding: 73px 0 73px 0;
     text-align: center;
 }
 
 .health-formulas-title {
     font-family: $font-main;
     font-size: 40px;
+    line-height: 150%;
     font-weight: 400;
     color: $primary;
     margin: 0 0 56px 0;
-    line-height: 1.18;
-    letter-spacing: 0.01em;
 }
 
 .health-formulas-list {
@@ -542,6 +543,8 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
+    max-width: 1136px;
+    margin: auto;
 }
 
 .health-formula-item {
@@ -793,7 +796,6 @@ h1,h2,h3,h4,h5,h6 {
     color: $primary;
     margin: 0 0 24px 0;
     line-height: 1.18;
-    letter-spacing: 0.01em;
 }
 
 .studies-desc {
@@ -885,13 +887,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .quality-title {
-    font-family: $font-main;
+    font-family: "Transducer Test Medium", Arial, sans-serif;
     font-size: 40px;
     font-weight: 400;
     color: $primary;
     margin: 0 0 28px 0;
     line-height: 1.18;
-    letter-spacing: 0.01em;
 
     .underline {
         border-bottom: 2px solid #003C3C;
@@ -902,7 +903,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .quality-sub {
     font-family: $font-main;
-    font-size: 17px;
+    font-size: 18px;
     color: $primary;
     font-weight: 400;
     margin: 0 0 32px 0;
@@ -914,20 +915,20 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .quality-highlight {
-    font-family: $font-main;
-    font-size: 28px;
+    font-family: "Transducer Test Medium", Arial, sans-serif;
+    font-size: 40px;
     color: $primary;
     font-weight: 400;
     margin: 0 0 32px 0;
-    line-height: 1.25;
+    line-height: 120%;
 }
 
 .quality-desc {
-    font-family: $font-main;
-    font-size: 16px;
+    font-family: $font-body;
+    font-size: 18px;
     color: $primary;
-    font-weight: 400;
-    line-height: 1.6;
+    font-weight: 300;
+    line-height: 150%;
     margin: 0;
     max-width: 520px;
 }
@@ -1043,13 +1044,13 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 1096px;
     width: 100%;
     min-height: 320px;
-    
+    padding: 27px 20px;
     flex-direction: row;
-    padding: 0 0 0 0;
+    padding: 27px 20px;
 }
 
 .bestseller-image-col {
-    flex:0 0 50%;
+    flex:0 0 45%;
     height: 100%;
     display: flex;
     align-items: flex-end;
@@ -1072,10 +1073,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bestseller-info-col {
+    flex:0 0 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 60px;
+    padding: 40px 40px 40px 60px;
     background: #f7faf9;
     min-width: 0;
 }
@@ -1099,9 +1101,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bestseller-name {
-    font-family: $font-main;
-    font-size: 24px;
-    font-weight: 600;
+    font-family: "Transducer Test Medium", Arial, sans-serif;
+    font-size: 32px;
+    line-height: 110%;;
     color: $primary;
     margin-bottom: 10px;
 }
@@ -2220,10 +2222,9 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 64px;
     font-weight: 400;
     color: #0b5a5a;
-    line-height: 1.1;
-    letter-spacing: 0.01em;
+    line-height:120%;
     min-width: 320px;
-    padding:5vw 0 22vw 70px;
+    padding:15vw 0 15vw 70px;
 }
 
 .rnd-principles-image {
