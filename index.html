@@ -11,6 +11,8 @@
         rel="stylesheet">
     <title>MDMedica</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -332,35 +334,46 @@
                     <a href="#" class="global-testimonials-btn">READ OUR REVIEWS</a>
                 </div>
                 <div class="global-testimonials-right">
-                    <div class="global-testimonials-grid">
-                        <div class="global-testimonial-card">
-                            <div class="global-testimonial-media">
-                                <img src="images/ejpyvkbctrk7p3ouahhi.jpg" alt="Testimonial 1" />
-                            </div>
-                            <div class="global-testimonial-quote">
-                                “My Energy Levels Went Up, Extra Pounds Disappeared”
-                            </div>
-                        </div>
-                        <div class="global-testimonial-card">
-                            <div class="global-testimonial-media">
-                                <img src="images/nvytvdsdfodyfznhx8fx.jpg" alt="Testimonial 2" />
-                            </div>
-                            <div class="global-testimonial-quote">
-                                “Got That Daily Focus I’ve Tried to Find”
-                            </div>
-                        </div>
-                        <div class="global-testimonial-card">
-                            <div class="global-testimonial-media">
-                                <div class="video-thumb">
-                                    <img src="images/i9usbvzdjsz9ofuqj24f.jpg" alt="Testimonial 3" />
-                                    <span class="play-btn">&#9654;</span>
+                    <div class="swiper global-testimonials-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="global-testimonial-card">
+                                    <div class="global-testimonial-media">
+                                        <img src="images/ejpyvkbctrk7p3ouahhi.jpg" alt="Testimonial 1" />
+                                    </div>
+                                    <div class="global-testimonial-quote">
+                                        “My Energy Levels Went Up, Extra Pounds Disappeared”
+                                    </div>
                                 </div>
                             </div>
-                            <div class="global-testimonial-quote">
-                                “My Memory is Sharper Than Ever”
+                            <div class="swiper-slide">
+                                <div class="global-testimonial-card">
+                                    <div class="global-testimonial-media">
+                                        <img src="images/nvytvdsdfodyfznhx8fx.jpg" alt="Testimonial 2" />
+                                    </div>
+                                    <div class="global-testimonial-quote">
+                                        “Got That Daily Focus I’ve Tried to Find”
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="global-testimonial-card">
+                                    <div class="global-testimonial-media">
+                                        <div class="video-thumb">
+                                            <img src="images/i9usbvzdjsz9ofuqj24f.jpg" alt="Testimonial 3" />
+                                            <span class="play-btn">&#9654;</span>
+                                        </div>
+                                    </div>
+                                    <div class="global-testimonial-quote">
+                                        “My Memory is Sharper Than Ever”
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
+                        <!-- Swiper navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -485,8 +498,11 @@
             </div>
         </div>
     </footer>
-
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/site-script.js"></script>
+    <!-- Swiper JS -->
+   
+  
 </body>
 
 </html>

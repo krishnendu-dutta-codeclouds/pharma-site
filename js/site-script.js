@@ -35,4 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === overlay) toggleMobileMenu(false);
         });
     }
+
+
+
+     new Swiper('.global-testimonials-swiper', {
+        slidesPerView: 3,
+        autoHeight:true,
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+            nextEl: '.global-testimonials-swiper .swiper-button-next',
+            prevEl: '.global-testimonials-swiper .swiper-button-prev',
+        },
+        grabCursor: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            900: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+            }
+        }
+    });
 });
