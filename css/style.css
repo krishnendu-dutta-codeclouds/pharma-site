@@ -169,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-banner .container .hero-content h1 {
   font-size: 64px;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 100%;
   margin: 0 0 32px 0;
   color: #034a4c;
   letter-spacing: 0.01em;
@@ -182,11 +182,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .hero-banner .container .hero-content .hero-subtitle {
-  font-size: 20px;
+  font-size: 18px;
   color: #034a4c;
+  font-weight: 500;
   margin-bottom: 40px;
-  font-weight: 400;
-  line-height: 1.4;
+  line-height: 110%;
 }
 .hero-banner .container .hero-content .hero-btn {
   display: flex;
@@ -723,7 +723,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 7vw;
+  padding: 0 6vw;
   text-align: left;
 }
 
@@ -815,7 +815,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 7vw 40px 7vw;
+  padding: 40px 6vw 40px 6vw;
   background: #f7fafa;
   text-align: left;
 }
@@ -835,10 +835,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .quality-sub {
-  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   color: #034a4c;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0 0 32px 0;
   line-height: 1.5;
 }
@@ -948,12 +948,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .bestsellers-title {
   text-align: center;
-  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-family: "Transducer Test Medium", Arial, sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: #034a4c;
   margin: 0 0 40px 0;
-  line-height: 1.2;
+  line-height: 135%;
 }
 
 .bestsellers-list {
@@ -1019,7 +1019,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   border-radius: 16px;
   padding: 4px 10px;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   width: 120px;
   display: flex;
   align-items: center;
@@ -1059,7 +1059,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bestseller-features {
   margin: 0 0 24px 0;
-  padding: 0 0 0 18px;
+  padding: 0 0 0 30px;
   list-style: disc;
   color: #034a4c;
   font-size: 16px;
@@ -1068,6 +1068,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 .bestseller-features li {
+  margin-bottom: 12px;
   marker: none;
   list-style-type: none;
   position: relative;
@@ -1084,6 +1085,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bestseller-btn {
+  max-width: 362px;
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1174,7 +1177,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 32px;
-  padding: 48px 24px 32px 24px;
+  padding: 60px 24px 100px 24px;
 }
 
 .global-testimonials-left {
@@ -1189,7 +1192,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .global-testimonials-title {
   font-family: "Transducer Test Medium", Arial, sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 400;
   color: #034a4c;
   margin: 0 0 24px 0;
@@ -1203,15 +1206,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .global-testimonials-count {
   font-family: "Transducer Test Hairline", Arial, sans-serif;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 600;
   color: #034a4c;
   margin-bottom: 8px;
   line-height: 1.1;
 }
 .global-testimonials-count span {
-  font-size: 18px;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 120%;
   color: #034a4c;
   display: block;
   margin-top: 4px;
@@ -1221,7 +1225,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 16px 0 4px 0;
+  margin: 40px 0 4px 0;
 }
 .global-testimonials-rating .rating-value {
   font-size: 22px;
@@ -1244,11 +1248,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .global-testimonials-btn {
+  width: 100%;
   display: inline-block;
+  justify-content: center;
+  text-align: center;
   background: #4ee0d6;
   color: #034a4c;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 8px;
   padding: 12px 32px;
   text-decoration: none;
@@ -1513,12 +1520,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 64px 16px;
+  padding: 10vw 16px;
   text-align: center;
 }
 
 .cta-100-title {
-  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-family: "Transducer Test Medium", Arial, sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: #034a4c;
@@ -1593,19 +1600,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .newsletter-title {
-  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-family: "Transducer Test Medium", Arial, sans-serif;
   font-size: 48px;
   font-weight: 400;
   color: #034a4c;
   margin: 0 0 40px 0;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
+  line-height: 120%;
 }
 
 .newsletter-form {
   display: flex;
   width: 100%;
-  max-width: 540px;
+  max-width: 627px;
   margin-bottom: 32px;
   background: none;
 }
@@ -1615,7 +1621,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   padding: 0 18px;
   height: 48px;
-  border: 2px solid #eaf6f6;
+  border: 1px solid #c0d1d2;
   border-radius: 4px 0 0 4px;
   outline: none;
   font-family: "Inter", sans-serif;
@@ -1660,8 +1666,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #034a4c;
   margin-top: 0;
   margin-bottom: 0;
-  opacity: 0.8;
-  line-height: 1.5;
+  font-weight: 300;
+  line-height: 150%;
 }
 
 @media (max-width: 900px) {
