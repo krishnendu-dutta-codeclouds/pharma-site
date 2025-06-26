@@ -309,9 +309,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-menu-overlay .mobile-menu-panel {
   background: #034a4c;
-  width: 90vw;
-  transform: translateX(-90vw);
-  max-width: 380px;
+  width: 100vw;
+  transform: translateX(-100vw);
   height: 100vh;
   position: fixed;
   top: 0;
@@ -378,6 +377,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   padding: 32px 0 0 0;
+  overflow-y: auto;
 }
 .mobile-menu-list a {
   color: #fff;
@@ -391,9 +391,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   transition: background 0.15s;
   border: none;
-}
-.mobile-menu-list a:hover {
-  background: rgba(255, 255, 255, 0.04);
 }
 .mobile-menu-list .mobile-menu-login {
   font-size: 22px;
@@ -412,6 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-menu-list .mobile-menu-login .mobile-menu-icon svg {
   stroke: #fff;
+  fill: transparent;
 }
 .mobile-menu-list hr {
   border: none;
@@ -581,7 +579,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .mobile-menu-btn {
     display: flex;
-    margin-left: 8px;
+    margin-left: 0;
     align-items: center;
     justify-content: center;
     height: 44px;
