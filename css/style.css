@@ -13,6 +13,11 @@
   src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot");
   src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff") format("woff"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.svg#Transducer") format("svg");
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -60,11 +65,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-left .logo {
+  display: flex;
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 0.02em;
   color: #034a4c;
   font-family: "Transducer Test Hairline", Arial, sans-serif;
+}
+.header-left .logo img {
+  max-width: 210px;
 }
 
 .header-nav {
@@ -1175,11 +1184,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 24px 0 0;
+  padding: 0 12px 0 60px;
 }
 
 .global-testimonials-title {
-  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-family: "Transducer Test Medium", Arial, sans-serif;
   font-size: 36px;
   font-weight: 400;
   color: #034a4c;
@@ -1747,6 +1756,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #eaf6f6;
   margin-bottom: 40px;
   letter-spacing: 0.02em;
+}
+.footer-logo img {
+  max-width: 410px;
 }
 
 .footer-disclaimer {

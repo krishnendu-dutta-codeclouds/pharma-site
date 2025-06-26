@@ -40,6 +40,10 @@ $white: #fff;
 $font-main: 'Transducer Test Hairline', Arial, sans-serif;
 $font-body: "Inter", sans-serif;
 
+img{
+    max-width: 100%;
+    height: auto;
+}
 // Mixins
 @mixin flex-center {
     display: flex;
@@ -96,11 +100,15 @@ h1,h2,h3,h4,h5,h6 {
 
 .header-left {
     .logo {
+        display: flex;
         font-weight: 700;
         font-size: 24px;
         letter-spacing: 0.02em;
         color: $primary;
         font-family: $font-main;
+        img{
+            max-width: 210px;
+        }
     }
 }
 
@@ -1258,11 +1266,11 @@ h1,h2,h3,h4,h5,h6 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 24px 0 0;
+    padding: 0 12px 0 60px;
 }
 
 .global-testimonials-title {
-    font-family: $font-main;
+    font-family: "Transducer Test Medium", Arial, sans-serif;
     font-size: 36px;
     font-weight: 400;
     color: $primary;
@@ -1833,6 +1841,9 @@ h1,h2,h3,h4,h5,h6 {
     color: #eaf6f6;
     margin-bottom: 40px;
     letter-spacing: 0.02em;
+    img{
+        max-width: 410px;
+    }
 }
 
 .footer-disclaimer {
