@@ -1207,6 +1207,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 22px;
   letter-spacing: 1px;
 }
+.global-testimonials-rating .stars img {
+  max-width: 110px;
+}
 
 .global-testimonials-rating-desc {
   font-size: 13px;
