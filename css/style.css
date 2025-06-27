@@ -75,6 +75,11 @@ h1, h2, h3, h4, h5, h6 {
 .header-left .logo img {
   max-width: 210px;
 }
+@media (max-width: 600px) {
+  .header-left .logo img {
+    max-width: 150px;
+  }
+}
 
 .header-nav {
   display: flex;
@@ -361,6 +366,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: "Transducer Test Hairline", Arial, sans-serif;
   letter-spacing: 0.02em;
+  max-width: 210px;
 }
 .mobile-menu-header .mobile-menu-icons {
   display: flex;
@@ -1434,10 +1440,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   .global-testimonials-left {
     max-width: 100%;
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: flex-start;
     display: flex;
     padding-right: 0;
+    padding-left: 0;
   }
   .global-testimonials-left > * {
     width: 100%;
@@ -1458,6 +1465,9 @@ h1, h2, h3, h4, h5, h6 {
     align-items: stretch;
     gap: 18px;
     padding: 24px 20px 12px 20px;
+  }
+  .global-testimonials-left {
+    padding: 0 12px 0 0;
   }
   .global-testimonials-grid {
     gap: 8px;
@@ -1764,6 +1774,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-logo img {
   max-width: 410px;
+}
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 150px;
+  }
 }
 
 .footer-disclaimer {
