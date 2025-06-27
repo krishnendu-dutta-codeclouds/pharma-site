@@ -83,5 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Product card click: open product.html
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', function (e) {
+            // Prevent navigation if a link or button inside is clicked
+            if (
+                e.target.closest('a') ||
+                e.target.tagName === 'BUTTON' ||
+                e.target.closest('button')
+            ) return;
+            window.location.href = 'product.html';
+        });
+    });
 });
 
