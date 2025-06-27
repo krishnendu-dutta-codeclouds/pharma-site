@@ -19,11 +19,11 @@
     <header class="main-header">
         <div class="header-inner">
             <div class="header-left">
-                <span class="logo">
+                <a href="/" class="logo">
                     <img src="images/logo.png" alt="MDMedica Logo" width="210" height="48" loading="eager">
-                </span>
+                </a>
             </div>
-            <nav class="header-nav">
+            <nav class="header-nav" aria-label="Main navigation">
                 <a href="#">OUR PRODUCTS</a>
                 <a href="#">ABOUT US</a>
                 <a href="#">CONTACT US</a>
@@ -59,9 +59,9 @@
         <div class="mobile-menu-overlay" id="mobileMenu">
             <div class="mobile-menu-panel">
                 <div class="mobile-menu-header">
-                    <span class="logo">
+                    <a href="/" class="logo">
                         <img src="images/logo.png" alt="MDMedica Logo" width="210" height="48" loading="eager">
-                    </span>
+                    </a>
                     <div class="mobile-menu-icons">
                         <button class="mobile-menu-close" aria-label="Close menu">
                             <svg width="32" height="32" viewBox="0 0 24 24" stroke="#003C3C" stroke-width="2">
@@ -71,7 +71,7 @@
                         </button>
                     </div>
                 </div>
-                <nav class="mobile-menu-list">
+                <nav class="mobile-menu-list" aria-label="Mobile navigation">
                     <a href="#" class="mobile-menu-login">
                         Login
                         <span class="mobile-menu-icon">
@@ -121,17 +121,17 @@
                     <div class="review-count">2,002 Verified 5-Star Reviews</div>
                 </div>
                 <div class="testimonial-divider"></div>
-                <div class="testimonial-quote">
+                <blockquote class="testimonial-quote">
                     <p>
                         “MDMedica is my daily non-negotiable—one step closer to peak performance, with the focus,
                         energy, and resilience I need to tackle anything life throws at me.“
                     </p>
-                    <div class="testimonial-user">
+                    <footer class="testimonial-user">
                         <img src="images/Ellipse_45_9080b775-3b30-4ed6-9137-546dc171ae06.png" alt="Testimonial from Victoria"
                             class="testimonial-avatar" width="32" height="32">
                         <span class="testimonial-name">Victoria</span>
-                    </div>
-                </div>
+                    </footer>
+                </blockquote>
             </div>
         </section>
         <section class="health-formulas-section">
@@ -142,31 +142,31 @@
                     formulas for:
                 </h2>
                 <div class="health-formulas-list">
-                    <div class="health-formula-item">
+                    <article class="health-formula-item">
                         <div class="icon">
                             <img src="images/Artboard_19.svg" alt="Brain Health Icon" width="64" height="64" loading="lazy">
                         </div>
                         <div class="label">Brain Health</div>
-                    </div>
-                    <div class="health-formula-item">
+                    </article>
+                    <article class="health-formula-item">
                         <div class="icon">
                             <img src="images/Artboard_18.svg" alt="Physical Performance & Recovery Icon" width="64" height="64"
                                 loading="lazy">
                         </div>
                         <div class="label">Physical Performance<br>&amp; Recovery</div>
-                    </div>
-                    <div class="health-formula-item">
+                    </article>
+                    <article class="health-formula-item">
                         <div class="icon">
                             <img src="images/Group_2734.svg" alt="Longevity Icon" width="64" height="64" loading="lazy">
                         </div>
                         <div class="label">Longevity</div>
-                    </div>
-                    <div class="health-formula-item">
+                    </article>
+                    <article class="health-formula-item">
                         <div class="icon">
                             <img src="images/Group_2733.svg" alt="Gut Health Icon" width="64" height="64" loading="lazy">
                         </div>
                         <div class="label">Gut Health</div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -216,7 +216,7 @@
             <div class="bestsellers-container">
                 <h2 class="bestsellers-title">Explore Our Best-Selling<br>Formulas</h2>
                 <div class="bestsellers-list">
-                    <div class="bestseller-card">
+                    <article class="bestseller-card">
                         <div class="bestseller-image-col">
                             <img src="images/BPC157.png" alt="BPC-157 Supplement Bottle" class="bestseller-image" width="250"
                                 height="320">
@@ -244,8 +244,8 @@
                                 Explore BPC-157
                             </a>
                         </div>
-                    </div>
-                    <div class="bestseller-card">
+                    </article>
+                    <article class="bestseller-card">
                         <div class="bestseller-image-col">
                             <img src="images/nad+bottle.png" alt="NAD+ Supplement Bottle" class="bestseller-image" width="250"
                                 height="320">
@@ -272,8 +272,8 @@
                                 Explore NAD+
                             </a>
                         </div>
-                    </div>
-                    <div class="bestseller-card">
+                    </article>
+                    <article class="bestseller-card">
                         <div class="bestseller-image-col">
                             <img src="images/nad+bottle.png" alt="PT 141 Supplement Bottle" class="bestseller-image" width="250"
                                 height="320">
@@ -300,8 +300,7 @@
                                 Explore PT 141
                             </a>
                         </div>
-                    </div>
-
+                    </article>
                 </div>
             </div>
         </section>
@@ -309,10 +308,9 @@
             <div class="rnd-principles-bg"></div>
             <div class="container">
                 <div class="rnd-principles-inner">
-                    <div class="rnd-principles-title">
+                    <h2 class="rnd-principles-title">
                         Our R&amp;D<br>Principles:
-                    </div>
-
+                    </h2>
                 </div>
             </div>
             <div class="rnd-principles-image">
@@ -423,7 +421,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
@@ -488,7 +485,7 @@
                     </div>
                 </div>
 
-                <div class="footer-links-col">
+                <nav class="footer-links-col" aria-label="Footer navigation">
                     <div class="footer-links-group">
                         <div class="footer-links-title">PRODUCTS</div>
                         <a href="#">Methylene Blue Liquid</a>
@@ -506,7 +503,7 @@
                         <a href="#">Contact Us</a>
                         <a href="#">Tracking Your order</a>
                     </div>
-                </div>
+                </nav>
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-right">
