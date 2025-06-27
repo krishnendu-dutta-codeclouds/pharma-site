@@ -1,0 +1,323 @@
+.main-header {
+    background:linear-gradient(135deg, rgba(231, 255, 253, 0.4), rgba(231, 255, 253, 0.4));
+    border-bottom: 1px solid $border;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom:1px solid #7da4a5;
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 82px;
+    padding: 0 30px;
+}
+
+.header-left {
+    .logo {
+        display: flex;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.02em;
+        color: $primary;
+        font-family: $font-main;
+        img{
+            max-width: 210px;
+            @media (max-width: 600px) {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+.header-nav {
+    display: flex;
+    gap: 32px;
+    margin-left: auto;
+
+    a {
+        text-decoration: none;
+        color: $primary;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+        @include transition(color 0.2s);
+
+        &:hover {
+            color: $primary-dark;
+        }
+    }
+}
+
+.header-divider {
+    width: 1px;
+    height: 36px;
+    background: #b8d3d3;
+    margin: 0 20px 0;
+}
+
+.header-right {
+    @include flex-center;
+    gap: 24px;
+}
+
+.currency-country {
+    @include flex-center;
+    font-size: 15px;
+    color: $primary;
+    gap: 6px;
+
+    .divider {
+        margin: 0 4px;
+        color: $divider;
+    }
+
+    .dropdown {
+        font-size: 12px;
+        margin-left: 4px;
+        color: $primary;
+    }
+}
+
+.login-link {
+    text-decoration: none;
+    color: $primary;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 8px;
+    @include transition(color 0.2s);
+
+    &:hover {
+        color: $primary-dark;
+    }
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    padding: 0 0 0 8px;
+    cursor: pointer;
+    @include flex-center;
+    @include transition(opacity 0.2s);
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+// Mobile Menu Overlay (slide from left)
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    height:100vh;
+    background: rgba(0,60,60,0.7);
+    color: $white;
+    flex-direction: column;
+    animation: none;
+    overflow-y: auto;
+
+    .mobile-menu-panel {
+        background: $primary;
+        width: 100vw;
+        transform: translateX(-100vw);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+    }
+
+    &.open {
+        display: flex;
+
+        .mobile-menu-panel {
+            transform: translateX(0);
+            animation: fadeIn 0.2s;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { transform: translateX(-90vw) }
+    to { transform: translateX(0) }
+}
+
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 20px 18px 20px;
+    background: $background;
+    border-bottom: 1px solid $border;
+
+    .logo {
+        color: $primary;
+        font-size: 26px;
+        font-weight: 700;
+        font-family: $font-main;
+        letter-spacing: 0.02em;
+        max-width: 210px;
+        img{
+            display: block;
+        }
+    }
+
+    .mobile-menu-icons {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .cart-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 0 0;
+    overflow-y: auto;
+    a {
+        color: $white;
+        text-decoration: none;
+        font-family: $font-main;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.15s;
+        border: none;
+    }
+
+    .mobile-menu-login {
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 12px;
+        padding-top: 0;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mobile-menu-icon {
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+            svg {
+                stroke: $white;
+                fill: transparent;
+            }
+        }
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid rgba(255,255,255,0.25);
+        margin: 0 24px;
+    }
+
+    .mobile-menu-arrow {
+        font-size: 26px;
+        margin-left: 12px;
+        color: $white;
+        font-weight: 400;
+    }
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0 0 0 12px;
+    cursor: pointer;
+    align-items: center;
+    svg {
+        display: block;
+    }
+}
+
+.desktop-cart {
+    display: flex;
+}
+.mobile-cart {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .header-inner {
+        padding: 0 20px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1 1 auto;
+    }
+    .logo {
+        font-size: 22px !important;
+    }
+    .header-nav,
+    .header-divider,
+    .currency-country,
+    .login-link {
+        display: none !important;
+    }
+    .header-right {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+    .cart-btn.mobile-cart {
+        display: flex;
+        margin-right: 0;
+    }
+    .mobile-menu-btn {
+        display: flex;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        width: 44px;
+    }
+    .desktop-cart {
+        display: none;
+    }
+    .mobile-cart {
+        display: flex;
+    }
+}

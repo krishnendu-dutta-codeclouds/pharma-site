@@ -54,6 +54,7 @@ $font-body: "Inter", sans-serif;
 
 img {
     max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -84,121 +85,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 // Header
-.main-header {
-    background:linear-gradient(135deg, rgba(231, 255, 253, 0.4), rgba(231, 255, 253, 0.4));
-    border-bottom: 1px solid $border;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom:1px solid #7da4a5;
-}
-
-.header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 82px;
-    padding: 0 30px;
-}
-
-.header-left {
-    .logo {
-        display: flex;
-        font-weight: 700;
-        font-size: 24px;
-        letter-spacing: 0.02em;
-        color: $primary;
-        font-family: $font-main;
-        img{
-            max-width: 210px;
-            @media (max-width: 600px) {
-                max-width: 150px;
-            }
-        }
-    }
-}
-
-.header-nav {
-    display: flex;
-    gap: 32px;
-    margin-left: auto;
-
-    a {
-        text-decoration: none;
-        color: $primary;
-        font-weight: 500;
-        font-size: 15px;
-        letter-spacing: 0.01em;
-        @include transition(color 0.2s);
-
-        &:hover {
-            color: $primary-dark;
-        }
-    }
-}
-
-.header-divider {
-    width: 1px;
-    height: 36px;
-    background: #b8d3d3;
-    margin: 0 20px 0;
-}
-
-.header-right {
-    @include flex-center;
-    gap: 24px;
-}
-
-.currency-country {
-    @include flex-center;
-    font-size: 15px;
-    color: $primary;
-    gap: 6px;
-
-    .divider {
-        margin: 0 4px;
-        color: $divider;
-    }
-
-    .dropdown {
-        font-size: 12px;
-        margin-left: 4px;
-        color: $primary;
-    }
-}
-
-.login-link {
-    text-decoration: none;
-    color: $primary;
-    font-size: 15px;
-    font-weight: 400;
-    margin-left: 8px;
-    @include transition(color 0.2s);
-
-    &:hover {
-        color: $primary-dark;
-    }
-}
-
-.cart-btn {
-    background: none;
-    border: none;
-    padding: 0 0 0 8px;
-    cursor: pointer;
-    @include flex-center;
-    @include transition(opacity 0.2s);
-
-    &:hover {
-        opacity: 0.7;
-    }
-}
+@import 'header';
 
 // Hero Banner
 .hero-banner {
@@ -578,7 +465,7 @@ h1,h2,h3,h4,h5,h6 {
 
     .icon {
         margin-bottom: 18px;
-        svg {
+        img {
             display: block;
             width: 64px;
             height: 64px;
@@ -591,6 +478,7 @@ h1,h2,h3,h4,h5,h6 {
         font-weight: 600;
         margin-top: 0;
         line-height: 1.25;
+        min-height: 50px;
     }
 }
 
@@ -1607,7 +1495,7 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin: 0;
+    margin: 70px 0 0;
     padding: 0;
 }
 
@@ -1727,6 +1615,120 @@ h1,h2,h3,h4,h5,h6 {
     line-height: 120%;
 }
 
+.newsletter-form {
+    display: flex;
+    width: 100%;
+    max-width: 627px;
+    margin-bottom: 32px;
+    background: none;
+}
+
+.newsletter-input {
+    flex: 1 1 auto;
+    font-size: 18px;
+    padding: 0 18px;
+    height: 48px;
+    border: 1px solid #c0d1d2;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-family: $font-body;
+    color: $primary;
+    background: $white;
+    transition: border 0.2s;
+    min-width: 0;
+    &::placeholder {
+        color: #7ca6a6;
+        opacity: 1;
+    }
+    &:focus {
+        border-color: #009999;
+    }
+}
+
+.newsletter-btn {
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+    background: $primary;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 0 36px;
+    height: 48px;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.01em;
+    &:hover {
+        background: $primary-dark;
+    }
+}
+
+.newsletter-desc {
+    font-family: $font-body;
+    font-size: 16px;
+    color: $primary;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+@media (max-width: 900px) {
+    .newsletter-title {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+    .newsletter-form {
+        max-width: 100%;
+    }
+    .newsletter-input,
+    .newsletter-btn {
+        font-size: 15px;
+        height: 42px;
+    }
+    .newsletter-btn {
+        padding: 0 18px;
+    }
+    .newsletter-desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .newsletter-section {
+        padding: 36px 0 28px 0;
+    }
+    .newsletter-title {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .newsletter-input,
+    .newsletter-btn {
+        border-radius: 4px;
+        font-size: 14px;
+        height: 38px;
+        padding: 0 10px;
+    }
+    .newsletter-btn {
+        margin-top: 0;
+        width: 100%;
+    }
+    .newsletter-desc {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+}
+
+// Footer
+@import 'footer';
+
+// ...existing code, but REMOVE all header and footer CSS blocks (those are now in _header.scss and _footer.scss)...
+// ...keep all other section styles as before...
 .newsletter-form {
     display: flex;
     width: 100%;
