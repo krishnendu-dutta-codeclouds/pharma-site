@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Transducer Test Regular";
+    src: url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.eot");
+    src: url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.svg#Transducer Test Regular")format("svg");
+}
+@font-face {
+    font-family: "Transducer Test Medium";
+    src: url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.eot");
+    src: url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.svg#Transducer Test Medium")format("svg");
+}
+@font-face {
+    font-family: "Transducer Test Hairline";
+    src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot");
+    src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.svg#Transducer")format("svg");
+}
+
+// Variables
+$primary: #034a4c;
+$primary-dark: #1a6a6a;
+$accent: #00524d;
+$background: #f6ffff;
+$border: #d9e4e4;
+$divider: #b8d3d3;
+$star: #FFD600;
+$white: #fff;
+$font-main: 'Transducer Test Hairline', Arial, sans-serif;
+$font-body: "Inter", sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin transition($props...) {
+    transition: $props;
+}
+
+// Base/Reset
+:where(html, body) {
+    box-sizing: border-box;
+    font-family: $font-body;
+    color: $primary;
+    margin: 0;
+    padding: 0;
+    background: $background;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $background;
+    font-family: $font-body;
+    color: $primary;
+    box-sizing: border-box;
+}
+
+strong {
+    font-family: 'Transducer Test Medium', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Transducer Test Hairline', Arial, sans-serif;
+}
+
+
+.bestseller-badge {
+    display: inline-block;
+    background: #6DD7CF;
+    color: $primary;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 4px 10px;
+    margin-bottom: 30px;
+    width: 120px;
+    @include flex-center;
+    gap:4px;
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}

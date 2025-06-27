@@ -1,0 +1,1043 @@
+@font-face {
+  font-family: "Transducer Test Regular";
+  src: url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.eot");
+  src: url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.woff") format("woff"), url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/29b618e51713f91ccd7706cf0543a3f9.svg#Transducer Test Regular") format("svg");
+}
+@font-face {
+  font-family: "Transducer Test Medium";
+  src: url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.eot");
+  src: url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.woff") format("woff"), url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.svg#Transducer Test Medium") format("svg");
+}
+@font-face {
+  font-family: "Transducer Test Hairline";
+  src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff") format("woff"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.svg#Transducer") format("svg");
+}
+:where(html, body) {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #034a4c;
+  margin: 0;
+  padding: 0;
+  background: #f6ffff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6ffff;
+  font-family: "Inter", sans-serif;
+  color: #034a4c;
+  box-sizing: border-box;
+}
+
+strong {
+  font-family: "Transducer Test Medium", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+}
+
+.bestseller-badge {
+  display: inline-block;
+  background: #6DD7CF;
+  color: #034a4c;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 16px;
+  padding: 4px 10px;
+  margin-bottom: 30px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.bestseller-badge img {
+  width: 20px;
+  height: 20px;
+}
+
+.main-header {
+  background: linear-gradient(135deg, rgba(231, 255, 253, 0.4), rgba(231, 255, 253, 0.4));
+  border-bottom: 1px solid #d9e4e4;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #7da4a5;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82px;
+  padding: 0 30px;
+}
+
+.header-left .logo {
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: #034a4c;
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+}
+.header-left .logo img {
+  max-width: 210px;
+}
+@media (max-width: 600px) {
+  .header-left .logo img {
+    max-width: 150px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  gap: 32px;
+  margin-left: auto;
+}
+.header-nav a {
+  text-decoration: none;
+  color: #034a4c;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+.header-nav a:hover {
+  color: #1a6a6a;
+}
+
+.header-divider {
+  width: 1px;
+  height: 36px;
+  background: #b8d3d3;
+  margin: 0 20px 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.currency-country {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #034a4c;
+  gap: 6px;
+}
+.currency-country .divider {
+  margin: 0 4px;
+  color: #b8d3d3;
+}
+.currency-country .dropdown {
+  font-size: 12px;
+  margin-left: 4px;
+  color: #034a4c;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #034a4c;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 8px;
+  transition: color 0.2s;
+}
+.login-link:hover {
+  color: #1a6a6a;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+  padding: 0 0 0 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.cart-btn:hover {
+  opacity: 0.7;
+}
+
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  height: 100vh;
+  background: rgba(0, 60, 60, 0.7);
+  color: #fff;
+  flex-direction: column;
+  animation: none;
+  overflow-y: auto;
+}
+.mobile-menu-overlay .mobile-menu-panel {
+  background: #034a4c;
+  width: 100vw;
+  transform: translateX(-100vw);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+}
+.mobile-menu-overlay.open {
+  display: flex;
+}
+.mobile-menu-overlay.open .mobile-menu-panel {
+  transform: translateX(0);
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(-90vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 20px 18px 20px;
+  background: #f6ffff;
+  border-bottom: 1px solid #d9e4e4;
+}
+.mobile-menu-header .logo {
+  color: #034a4c;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  letter-spacing: 0.02em;
+  max-width: 210px;
+}
+.mobile-menu-header .logo img {
+  display: block;
+}
+.mobile-menu-header .mobile-menu-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.mobile-menu-header .mobile-menu-icons .cart-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.mobile-menu-header .mobile-menu-icons .mobile-menu-close {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+  overflow-y: auto;
+}
+.mobile-menu-list a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.15s;
+  border: none;
+}
+.mobile-menu-list .mobile-menu-login {
+  font-size: 22px;
+  font-weight: 400;
+  padding-bottom: 12px;
+  padding-top: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-menu-list .mobile-menu-login .mobile-menu-icon {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.mobile-menu-list .mobile-menu-login .mobile-menu-icon svg {
+  stroke: #fff;
+  fill: transparent;
+}
+.mobile-menu-list hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 0 24px;
+}
+.mobile-menu-list .mobile-menu-arrow {
+  font-size: 26px;
+  margin-left: 12px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0 0 0 12px;
+  cursor: pointer;
+  align-items: center;
+}
+.mobile-menu-btn svg {
+  display: block;
+}
+
+.desktop-cart {
+  display: flex;
+}
+
+.mobile-cart {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    padding: 0 20px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 auto;
+  }
+  .logo {
+    font-size: 22px !important;
+  }
+  .header-nav,
+  .header-divider,
+  .currency-country,
+  .login-link {
+    display: none !important;
+  }
+  .header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .cart-btn.mobile-cart {
+    display: flex;
+    margin-right: 0;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+  }
+  .desktop-cart {
+    display: none;
+  }
+  .mobile-cart {
+    display: flex;
+  }
+}
+.site-footer {
+  background: #034a4c;
+  color: #eaf6f6;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  padding: 0 0 0 0;
+  border-bottom: 1px solid #4a8686;
+}
+
+.footer-brand-col {
+  min-width: 220px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+.footer-logo {
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #eaf6f6;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+}
+.footer-logo img {
+  max-width: 410px;
+}
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 150px;
+  }
+}
+
+.footer-disclaimer {
+  font-size: 15px;
+  color: #9eb8b8;
+  opacity: 0.8;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.footer-contact {
+  font-size: 15px;
+  color: #9eb8b8;
+  opacity: 0.95;
+  margin-bottom: 0;
+}
+.footer-contact a {
+  color: #9eb8b8;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.footer-connect-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.footer-connect-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #eaf6f6;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.footer-connect-sub {
+  font-size: 16px;
+  color: #9eb8b8;
+  opacity: 0.95;
+  margin-bottom: 12px;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 18px;
+}
+
+.footer-newsletter-input {
+  flex: 1 1 auto;
+  font-size: 17px;
+  padding: 0 16px;
+  height: 44px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  color: #003C3C;
+  background: #fff;
+}
+.footer-newsletter-input::-moz-placeholder {
+  color: #7ca6a6;
+  opacity: 1;
+}
+.footer-newsletter-input::placeholder {
+  color: #7ca6a6;
+  opacity: 1;
+}
+
+.footer-newsletter-btn {
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #165b5b;
+  background: #7fd6cd;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 0 32px;
+  height: 44px;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+}
+.footer-newsletter-btn:hover {
+  background: #4ee0d6;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.footer-social-icon img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: brightness(0) invert(1) opacity(0.85);
+  transition: filter 0.2s;
+}
+.footer-social-icon:hover img {
+  filter: brightness(0) invert(1) opacity(1);
+}
+
+.footer-links-col {
+  flex: 0 0 50%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+  margin-left: auto;
+}
+
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 160px;
+  margin-bottom: 0;
+  flex: 1;
+}
+.footer-links-group.footer-links-group-policy {
+  margin-top: 0;
+  min-width: 200px;
+}
+
+.footer-links-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #eaf6f6;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.footer-links-group a {
+  color: #9eb8b8;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0.85;
+  margin-bottom: 6px;
+  transition: opacity 0.2s;
+}
+.footer-links-group a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #4a8686;
+  padding: 16px 0 8px 0;
+  font-size: 15px;
+  color: #9eb8b8;
+  opacity: 0.85;
+  margin-top: 0;
+}
+
+.footer-bottom-left {
+  text-align: left;
+}
+
+.footer-bottom-right {
+  text-align: right;
+}
+.footer-bottom-right a {
+  color: #9eb8b8;
+  text-decoration: none;
+  opacity: 0.85;
+}
+.footer-bottom-right a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .footer-main {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 0 20px 0;
+  }
+  .footer-links-col {
+    flex: none;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  .footer-links-col {
+    margin: 0;
+  }
+}
+@media (max-width: 900px) {
+  .footer-container {
+    padding: 40px 20px 10px;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 0 0 0;
+    border: 0;
+  }
+  .footer-brand-col,
+  .footer-connect-col,
+  .footer-links-col {
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 24px;
+    padding-bottom: 0;
+  }
+  .footer-links-col {
+    gap: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .footer-links-group {
+    min-width: 0;
+    margin-bottom: 0;
+  }
+  .footer-links-group-policy {
+    margin-top: 18px;
+  }
+  .footer-logo {
+    font-size: 36px;
+    margin-bottom: 0;
+  }
+  .footer-connect-title {
+    font-size: 20px;
+  }
+  .footer-newsletter-form {
+    max-width: 100%;
+  }
+  .footer-newsletter-input,
+  .footer-newsletter-btn {
+    font-size: 15px;
+    height: 38px;
+  }
+  .footer-newsletter-btn {
+    padding: 0 16px;
+  }
+  .footer-links-title {
+    font-size: 15px;
+  }
+  .footer-links-group a {
+    font-size: 14px;
+  }
+  .footer-bottom {
+    font-size: 13px;
+    padding: 12px 0 6px 0;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 40px 20px 10px;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 0 0 0;
+  }
+  .footer-brand-col,
+  .footer-connect-col,
+  .footer-links-col {
+    flex: none;
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+  }
+  .footer-links-col {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+  .footer-links-group {
+    min-width: 0;
+    margin-bottom: 0;
+  }
+  .footer-links-group-policy {
+    margin-top: 10px;
+  }
+  .footer-logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .footer-connect-title {
+    font-size: 16px;
+  }
+  .footer-newsletter-form {
+    flex-direction: column;
+    gap: 8px;
+    max-width: 100%;
+  }
+  .footer-newsletter-input,
+  .footer-newsletter-btn {
+    border-radius: 4px;
+    font-size: 13px;
+    height: 34px;
+    padding: 0 8px;
+  }
+  .footer-newsletter-btn {
+    margin-top: 0;
+    width: 100%;
+  }
+  .footer-links-title {
+    font-size: 13px;
+  }
+  .footer-links-group a {
+    font-size: 12px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    padding: 8px 0 4px 0;
+  }
+}
+main {
+  background-color: #fff;
+}
+
+.products-hero {
+  padding-top: 48px;
+  padding-bottom: 0;
+  text-align: left;
+}
+.products-hero .products-hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+@media (max-width: 900px) {
+  .products-hero .products-hero-inner {
+    padding-left: 20px;
+  }
+}
+.products-hero .products-title {
+  font-family: "Transducer Test Medium", Arial, sans-serif;
+  font-size: 48px;
+  color: #034a4c;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.products-hero .products-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #034a4c;
+  margin: 0 0 32px 0;
+  font-weight: 400;
+}
+
+.products-list-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  min-height: 60vh;
+  padding-bottom: 60px;
+}
+
+.products-list-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px 0;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  margin-top: 32px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .products-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .products-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.product-card {
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0 0 32px 0;
+  position: relative;
+  flex: 0 0 370px;
+  transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+  cursor: pointer;
+}
+.product-card:hover, .product-card:focus-within {
+  box-shadow: 0 8px 32px 0 rgba(0, 60, 60, 0.13), 0 1.5px 6px 0 rgba(0, 60, 60, 0.07);
+  transform: translateY(-6px) scale(1.025);
+  background: #f4fcfc;
+}
+.product-card:hover .product-card-image-wrap, .product-card:focus-within .product-card-image-wrap {
+  filter: brightness(1.04) drop-shadow(0 2px 12px rgba(0, 153, 153, 0.1333333333));
+  transition: filter 0.22s;
+}
+.product-card:hover .product-card-btn, .product-card:focus-within .product-card-btn {
+  background: #009999;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 153, 153, 0.07);
+}
+
+.product-card-image-wrap {
+  width: 100%;
+  min-height: 340px;
+  background: #f5f9f9;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+.product-card-image-wrap .product-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #e6fcfa;
+  color: #009999;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 16px;
+  padding: 4px 18px;
+  z-index: 2;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+}
+.product-card-image-wrap .product-image {
+  max-width: 260px;
+  max-height: 340px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+.product-card-info {
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 18px;
+  min-height: 210px;
+  justify-content: flex-start;
+}
+@media (max-width: 600px) {
+  .product-card-info {
+    padding: 0 10px;
+    min-height: 0;
+  }
+}
+.product-card-info .product-card-btn {
+  margin-top: auto;
+}
+
+.product-card-title {
+  font-family: "Transducer Test Medium", Arial, sans-serif;
+  font-size: 17px;
+  color: #034a4c;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-card-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #034a4c;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.product-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.product-card-meta .product-card-price {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #034a4c;
+  font-weight: 600;
+  border: 1.5px solid #009999;
+  border-radius: 24px;
+  padding: 4px 12px;
+  background: #fff;
+  display: inline-block;
+}
+.product-card-meta .product-card-rating {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #009999;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.product-card-meta .product-card-rating .product-rating-value {
+  margin-left: 2px;
+  font-weight: 700;
+  color: #009999;
+  font-size: 13px;
+}
+.product-card-meta .product-card-rating .product-rating-count {
+  margin-left: 2px;
+  color: #034a4c;
+  font-weight: 400;
+  font-size: 12px;
+}
+.product-card-meta .product-card-rating svg {
+  margin-right: 1px;
+  width: 15px;
+  height: 15px;
+}
+
+.product-card-btn {
+  width: 100%;
+  display: block;
+  background: #034a4c;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+  border: none;
+  transition: background 0.2s;
+  box-shadow: none;
+  font-family: "Inter", sans-serif;
+}
+.product-card-btn:hover {
+  background: #009999;
+}
+
+.product-badge,
+.product-card-bubble {
+  font-size: 12px !important;
+  padding: 3px 10px !important;
+}
+
+@media (max-width: 900px) {
+  .products-hero .products-title {
+    font-size: 32px;
+  }
+  .products-hero .products-subtitle {
+    font-size: 16px;
+  }
+  .product-card {
+    min-width: 0;
+    max-width: 100vw;
+  }
+}
+.bestseller-badge {
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+  left: 15px;
+}/*# sourceMappingURL=our-products.css.map */

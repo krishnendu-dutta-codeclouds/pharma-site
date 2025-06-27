@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-
      new Swiper('.global-testimonials-swiper', {
         slidesPerView: 3,
         autoHeight:true,
@@ -63,4 +61,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Product gallery swiper with thumbs
+    if (document.querySelector('.product-gallery-swiper') && document.querySelector('.product-gallery-thumbs-swiper')) {
+        const thumbsSwiper = new Swiper('.product-gallery-thumbs-swiper', {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            watchSlidesProgress: true,
+            slideToClickedSlide: true,
+            breakpoints: {
+                0: { slidesPerView: 4 },
+                600: { slidesPerView: 5 }
+            }
+        });
+        const gallerySwiper = new Swiper('.product-gallery-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            effect: 'slide',
+            thumbs: {
+                swiper: thumbsSwiper
+            }
+        });
+    }
 });
+

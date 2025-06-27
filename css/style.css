@@ -49,6 +49,25 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Transducer Test Hairline", Arial, sans-serif;
 }
 
+.bestseller-badge {
+  display: inline-block;
+  background: #6DD7CF;
+  color: #034a4c;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 16px;
+  padding: 4px 10px;
+  margin-bottom: 30px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.bestseller-badge img {
+  width: 20px;
+  height: 20px;
+}
+
 .main-header {
   background: linear-gradient(135deg, rgba(231, 255, 253, 0.4), rgba(231, 255, 253, 0.4));
   border-bottom: 1px solid #d9e4e4;
@@ -1223,25 +1242,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 40px 40px 60px;
   background: #f7faf9;
   min-width: 0;
-}
-
-.bestseller-badge {
-  display: inline-block;
-  background: #6DD7CF;
-  color: #034a4c;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 16px;
-  padding: 4px 10px;
-  margin-bottom: 30px;
-  width: 120px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.bestseller-badge img {
-  width: 20px;
-  height: 20px;
 }
 
 .bestseller-name {
