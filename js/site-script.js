@@ -1,11 +1,3 @@
-// Placeholder for dropdown interaction
-document.querySelectorAll('.currency-country').forEach(el => {
-    el.addEventListener('click', () => {
-        // Future: Show dropdown for currency/country selection
-    });
-});
-
-// Mobile menu functionality
 function toggleMobileMenu(open) {
     const menu = document.getElementById('mobileMenu');
     if (open) {
@@ -29,40 +21,40 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn && overlay) {
         closeBtn.addEventListener('click', () => toggleMobileMenu(false));
     }
-    // Close menu on overlay click (but not when clicking inside the panel)
     if (overlay && panel) {
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) toggleMobileMenu(false);
         });
     }
 
-     new Swiper('.global-testimonials-swiper', {
-        slidesPerView: 3,
-        autoHeight:true,
-        spaceBetween: 24,
-        loop: true,
-        navigation: {
-            nextEl: '.global-testimonials-swiper > .swiper-button-next',
-            prevEl: '.global-testimonials-swiper > .swiper-button-prev',
-        },
-        grabCursor: true,
-        breakpoints: {
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 24,
+    if (document.querySelector('.global-testimonials-swiper')) {
+        new Swiper('.global-testimonials-swiper', {
+            slidesPerView: 3,
+            autoHeight: true,
+            spaceBetween: 24,
+            loop: true,
+            navigation: {
+                nextEl: '.global-testimonials-swiper > .swiper-button-next',
+                prevEl: '.global-testimonials-swiper > .swiper-button-prev',
             },
-            900: {
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            0: {
-                slidesPerView: 2,
-                spaceBetween: 8,
+            grabCursor: true,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+                900: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 8,
+                }
             }
-        }
-    });
+        });
+    }
 
-    // Product gallery swiper with thumbs
     if (document.querySelector('.product-gallery-swiper') && document.querySelector('.product-gallery-thumbs-swiper')) {
         const thumbsSwiper = new Swiper('.product-gallery-thumbs-swiper', {
             slidesPerView: 5,
@@ -84,10 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Product card click: open product.html
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', function (e) {
-            // Prevent navigation if a link or button inside is clicked
             if (
                 e.target.closest('a') ||
                 e.target.tagName === 'BUTTON' ||
@@ -96,5 +86,42 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'product.html';
         });
     });
+
+    if (typeof window.gsap !== 'undefined') {
+        const cards = document.querySelectorAll('.products-list .product-card');
+        if (cards.length) {
+            const images = Array.from(cards).map(card => card.querySelector('img'));
+            let loaded = 0;
+            function animateCards() {
+                gsap.set(cards, { opacity: 0, y: 40 });
+                gsap.to(cards, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.7,
+                    stagger: 0.15,
+                    ease: "power2.out"
+                });
+            }
+            if (images.length === 0) {
+                animateCards();
+            } else {
+                images.forEach(img => {
+                    if (img.complete) {
+                        loaded++;
+                        if (loaded === images.length) animateCards();
+                    } else {
+                        img.addEventListener('load', () => {
+                            loaded++;
+                            if (loaded === images.length) animateCards();
+                        });
+                        img.addEventListener('error', () => {
+                            loaded++;
+                            if (loaded === images.length) animateCards();
+                        });
+                    }
+                });
+            }
+        }
+    }
 });
 
