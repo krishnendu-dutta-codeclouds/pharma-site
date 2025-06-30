@@ -79,21 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
     new Swiper(".studies-swiper", {
         slidesPerView: 1.2,
         spaceBetween: 20,
+        loop: true,
+        centeredSlides: false,
         navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
         },
         pagination: {
-        el: ".swiper-pagination",
-        clickable: true
+          el: ".swiper-pagination",
+          clickable: true
         },
         breakpoints: {
-        768: {
+          768: {
             slidesPerView: 2.2
-        },
-        1024: {
-            slidesPerView: 3
-        }
+          },
+          1024: {
+            slidesPerView: 3.2
+          }
         }
     });
 }
@@ -145,5 +147,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    // Accordion for Oral Healthletic BPC-157 section with smooth effect
+    document.querySelectorAll('.bpc-oral-accordion-header').forEach(header => {
+        header.addEventListener('click', function () {
+            const item = this.closest('.bpc-oral-accordion-item');
+            if (item.classList.contains('active')) return;
+
+            // Collapse all
+            document.querySelectorAll('.bpc-oral-accordion-item').forEach(i => {
+                i.classList.remove('active');
+                const body = i.querySelector('.bpc-oral-accordion-body');
+                if (body) {
+                    body.style.maxHeight = null;
+                    body.style.opacity = 0;
+                }
+            });
+
+            // Expand clicked
+            item.classList.add('active');
+            const body = item.querySelector('.bpc-oral-accordion-body');
+            if (body) {
+                body.style.maxHeight = body.scrollHeight + 50 + "px";
+                body.style.opacity = 1;
+            }
+        });
+    });
+
+    
 });
 

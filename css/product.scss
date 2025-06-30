@@ -700,18 +700,19 @@
     padding: 32px 0 0 0;
 }
 .promising-support-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
 }
 .promising-support-title {
+    max-width: 800px;
     text-align: center;
     font-family: 'Transducer Test Medium', Arial, sans-serif;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 700;
     color: #034a4c;
-    margin-bottom: 36px;
-    line-height: 1.1;
+    margin:0 auto 36px auto;
+    line-height:1.3em;
     letter-spacing: 0.01em;
 }
 .promising-support-2col {
@@ -731,12 +732,12 @@
 }
 .promising-support-item {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    padding: 0 0 32px 0;
-    min-height: 210px; // Set a fixed minimum height for equal box heights (adjust as needed)
+    padding: 0 0 0 0;
+    min-height: 200px;
     box-sizing: border-box;
-    // Make inner content stretch to fill height
     > .promising-support-icon {
         align-self: flex-start;
     }
@@ -752,7 +753,6 @@
     height: 56px;
     min-width: 56px;
     min-height: 56px;
-    background: #e6fcfa;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -762,7 +762,7 @@
 }
 .promising-support-item h3 {
     font-family: 'Transducer Test Medium', Arial, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     color: #034a4c;
     margin: 0 0 8px 0;
@@ -770,11 +770,11 @@
 }
 .promising-support-item p {
     font-family: 'Inter', Arial, sans-serif;
-    font-size: 15px; // reduced from 16px
+    font-size: 14px; 
     color: #034a4c;
     margin: 0;
     font-weight: 400;
-    line-height: 1.35; // slightly reduced line height
+    line-height: 1.35; 
 }
 .promising-support-divider {
     border-bottom: 1px solid #e0e7e7;
@@ -808,7 +808,7 @@
         font-size: 18px;
     }
     .promising-support-item p {
-        font-size: 13px; // reduced from 14px
+        font-size: 13px; 
     }
     .promising-support-divider {
         margin-bottom: 24px;
@@ -837,7 +837,7 @@
         font-size: 15px;
     }
     .promising-support-item p {
-        font-size: 11px; // reduced from 12px
+        font-size: 11px;
     }
     .promising-support-divider {
         margin-bottom: 12px;
@@ -1090,9 +1090,9 @@
   padding: 64px 0 32px 0;
 }
 .bpc-oral-accordion-container {
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 .bpc-oral-accordion-title {
   font-family: 'Transducer Test Medium', Arial, sans-serif;

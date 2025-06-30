@@ -624,7 +624,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 32px;
   background: #f7faf9;
   border-radius: 14px;
-  padding: 16px 10px 10px 10px;
+  padding: 14px 10px 10px 10px;
 }
 .product-info-col .product-feature-list .product-feature-col ul {
   margin: 0;
@@ -648,8 +648,8 @@ h1, h2, h3, h4, h5, h6 {
 .product-info-col .product-feature-list .product-feature-col ul li::before {
   content: "";
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: url("../images/feature-icon.svg") no-repeat center/contain;
   flex-shrink: 0;
 }
@@ -816,7 +816,7 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../images/clock.svg") no-repeat center/contain;
 }
 .product-info-col .product-shipping-row .shipping-flag, .product-info-col .product-free-shipping-row .shipping-flag {
-  width: 13px;
+  width: 14px;
   height: 9px;
   margin-left: 3px;
   display: inline-block;
@@ -835,7 +835,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   font-weight: 700;
   border-radius: 5px;
-  padding: 10px 0;
+  padding: 9px 0;
   text-align: center;
   border: none;
   margin-bottom: 0;
@@ -1095,19 +1095,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .promising-support-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .promising-support-title {
+  max-width: 800px;
   text-align: center;
   font-family: "Transducer Test Medium", Arial, sans-serif;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   color: #034a4c;
-  margin-bottom: 36px;
-  line-height: 1.1;
+  margin: 0 auto 36px auto;
+  line-height: 1.3em;
   letter-spacing: 0.01em;
 }
 
@@ -1132,10 +1133,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .promising-support-item {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  padding: 0 0 32px 0;
-  min-height: 210px;
+  padding: 0 0 0 0;
+  min-height: 200px;
   box-sizing: border-box;
 }
 .promising-support-item > .promising-support-icon {
@@ -1153,7 +1155,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 56px;
   min-width: 56px;
   min-height: 56px;
-  background: #e6fcfa;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1165,7 +1166,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .promising-support-item h3 {
   font-family: "Transducer Test Medium", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   color: #034a4c;
   margin: 0 0 8px 0;
@@ -1174,7 +1175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .promising-support-item p {
   font-family: "Inter", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: #034a4c;
   margin: 0;
   font-weight: 400;
@@ -1482,9 +1483,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bpc-oral-accordion-container {
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 .bpc-oral-accordion-title {
