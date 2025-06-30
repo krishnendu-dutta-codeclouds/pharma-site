@@ -75,6 +75,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+  if (document.querySelector('.studies-swiper')) {
+    new Swiper(".studies-swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+        },
+        breakpoints: {
+        768: {
+            slidesPerView: 2.2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+        }
+    });
+}
 
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', function (e) {
