@@ -148,32 +148,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Accordion for Oral Healthletic BPC-157 section with smooth effect
-    document.querySelectorAll('.bpc-oral-accordion-header').forEach(header => {
-        header.addEventListener('click', function () {
-            const item = this.closest('.bpc-oral-accordion-item');
-            if (item.classList.contains('active')) return;
 
-            // Collapse all
-            document.querySelectorAll('.bpc-oral-accordion-item').forEach(i => {
-                i.classList.remove('active');
-                const body = i.querySelector('.bpc-oral-accordion-body');
-                if (body) {
-                    body.style.maxHeight = null;
-                    body.style.opacity = 0;
+
+    // Unified Accordion with smooth animation for both FAQ and bpc-oral-accordion-list
+    function setupSmoothAccordion(containerSelector, itemSelector, questionSelector, answerSelector, openClass = 'open') {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+        const items = container.querySelectorAll(itemSelector);
+
+        items.forEach(item => {
+            const question = item.querySelector(questionSelector);
+            const answer = item.querySelector(answerSelector);
+            if (question && answer) {
+                // Set initial state
+                if (item.classList.contains(openClass)) {
+                    answer.style.maxHeight = answer.scrollHeight + 50 + "px";
+                    answer.style.opacity = 1;
+                } else {
+                    answer.style.maxHeight = null;
+                    answer.style.opacity = 0;
                 }
-            });
+                question.addEventListener('click', function () {
+                    // Close all open items except the one clicked
+                    items.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove(openClass);
+                            const ans = i.querySelector(answerSelector);
+                            if (ans) {
+                                ans.style.maxHeight = null;
+                                ans.style.opacity = 0;
+                            }
+                        }
+                    });
 
-            // Expand clicked
-            item.classList.add('active');
-            const body = item.querySelector('.bpc-oral-accordion-body');
-            if (body) {
-                body.style.maxHeight = body.scrollHeight + 50 + "px";
-                body.style.opacity = 1;
+                    // Toggle the clicked item
+                    const isOpen = item.classList.toggle(openClass);
+                    if (isOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + 50 + "px";
+                        answer.style.opacity = 1;
+                    } else {
+                        answer.style.maxHeight = null;
+                        answer.style.opacity = 0;
+                    }
+                });
             }
         });
-    });
+    }
 
-    
+    // FAQ Section
+    setupSmoothAccordion(
+        '.faq-section',
+        '.faq-item',
+        '.faq-question',
+        '.faq-answer',
+        'open'
+    );
+
+    // BPC Oral Accordion Section
+    setupSmoothAccordion(
+        '.bpc-oral-accordion-list',
+        '.bpc-oral-accordion-item',
+        '.bpc-oral-accordion-header',
+        '.bpc-oral-accordion-body',
+        'active'
+    );
+
 });
 
