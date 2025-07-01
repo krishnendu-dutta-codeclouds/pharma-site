@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Unified Accordion with smooth animation for both FAQ and bpc-oral-accordion-list
-    function setupSmoothAccordion(containerSelector, itemSelector, questionSelector, answerSelector, openClass = 'open') {
+    function setupSmoothAccordion(containerSelector, itemSelector, questionSelector, answerSelector, openClass = 'open', iconSelector = null) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
         const items = container.querySelectorAll(itemSelector);
@@ -159,14 +159,23 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach(item => {
             const question = item.querySelector(questionSelector);
             const answer = item.querySelector(answerSelector);
+            const icon = iconSelector ? question.querySelector(iconSelector) : null;
             if (question && answer) {
                 // Set initial state
                 if (item.classList.contains(openClass)) {
                     answer.style.maxHeight = answer.scrollHeight + 50 + "px";
                     answer.style.opacity = 1;
+                    if (icon) {
+                        icon.classList.remove('plus');
+                        icon.classList.add('minus');
+                    }
                 } else {
                     answer.style.maxHeight = null;
                     answer.style.opacity = 0;
+                    if (icon) {
+                        icon.classList.remove('minus');
+                        icon.classList.add('plus');
+                    }
                 }
                 question.addEventListener('click', function () {
                     // Close all open items except the one clicked
@@ -174,9 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (i !== item) {
                             i.classList.remove(openClass);
                             const ans = i.querySelector(answerSelector);
+                            const ic = iconSelector ? i.querySelector(questionSelector + ' ' + iconSelector) : null;
                             if (ans) {
                                 ans.style.maxHeight = null;
                                 ans.style.opacity = 0;
+                            }
+                            if (ic) {
+                                ic.classList.remove('minus');
+                                ic.classList.add('plus');
                             }
                         }
                     });
@@ -186,9 +200,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (isOpen) {
                         answer.style.maxHeight = answer.scrollHeight + 50 + "px";
                         answer.style.opacity = 1;
+                        if (icon) {
+                            icon.classList.remove('plus');
+                            icon.classList.add('minus');
+                        }
                     } else {
                         answer.style.maxHeight = null;
                         answer.style.opacity = 0;
+                        if (icon) {
+                            icon.classList.remove('minus');
+                            icon.classList.add('plus');
+                        }
                     }
                 });
             }
@@ -201,7 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '.faq-item',
         '.faq-question',
         '.faq-answer',
-        'open'
+        'open',
+        '.faq-icon'
     );
 
     // BPC Oral Accordion Section

@@ -1524,31 +1524,27 @@ h1, h2, h3, h4, h5, h6 {
   height: 32px;
   position: relative;
 }
-
-.bpc-oral-accordion-icon:before,
-.bpc-oral-accordion-icon:after {
+.bpc-oral-accordion-icon::before, .bpc-oral-accordion-icon::after {
   content: "";
   position: absolute;
   background: #5ad6d3;
   border-radius: 2px;
   transition: all 0.2s;
 }
-
-.bpc-oral-accordion-icon:before {
+.bpc-oral-accordion-icon::before {
   left: 8px;
   top: 15px;
   width: 16px;
   height: 3px;
 }
-
-.bpc-oral-accordion-icon:after {
+.bpc-oral-accordion-icon::after {
   left: 15px;
   top: 8px;
   width: 3px;
   height: 16px;
 }
 
-.bpc-oral-accordion-item.active .bpc-oral-accordion-icon:after {
+.bpc-oral-accordion-item.active .bpc-oral-accordion-icon::after {
   opacity: 0;
 }
 
@@ -2151,13 +2147,12 @@ h1, h2, h3, h4, h5, h6 {
 .faq-section .faq-item.open .faq-question .faq-icon.minus:before {
   content: "";
   display: block;
-  width: 28px;
-  height: 2px;
+  width: 16px;
+  height: 3px;
   background: #73d5d3;
   border-radius: 1px;
   position: absolute;
-  left: 0;
-  top: 13px;
+  top: 15px;
 }
 .faq-section .faq-item.open .faq-answer {
   display: block;
@@ -2177,37 +2172,38 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.2s;
 }
 .faq-section .faq-question .faq-icon {
-  display: block;
-  width: 28px;
-  height: 28px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-.faq-section .faq-question .faq-icon.plus:before, .faq-section .faq-question .faq-icon.plus:after, .faq-section .faq-question .faq-icon.minus:before, .faq-section .faq-question .faq-icon.minus:after {
+.faq-section .faq-question .faq-icon:before, .faq-section .faq-question .faq-icon:after {
   content: "";
   position: absolute;
-  background: #73d5d3;
-  border-radius: 1px;
+  background: #5ad6d3;
+  border-radius: 2px;
+  transition: all 0.2s;
 }
-.faq-section .faq-question .faq-icon.plus:before {
-  width: 28px;
-  height: 2px;
-  left: 0;
-  top: 13px;
+.faq-section .faq-question .faq-icon:before {
+  left: 8px;
+  top: 15px;
+  width: 16px;
+  height: 3px;
+}
+.faq-section .faq-question .faq-icon:after {
+  left: 15px;
+  top: 8px;
+  width: 3px;
+  height: 16px;
+}
+.faq-section .faq-question .faq-icon.minus:after {
+  opacity: 0;
 }
 .faq-section .faq-question .faq-icon.plus:after {
-  width: 2px;
-  height: 28px;
-  left: 13px;
-  top: 0;
-}
-.faq-section .faq-question .faq-icon.minus:before {
-  width: 28px;
-  height: 2px;
-  left: 0;
-  top: 13px;
+  opacity: 1;
 }
 .faq-section .faq-answer {
   display: block;
