@@ -87,7 +87,7 @@ main{
     cursor: pointer;
 
     a.product-card-btn {
-        pointer-events: none; // Prevent double navigation on button click
+        pointer-events: none;
     }
 
     &:hover,
@@ -155,13 +155,12 @@ main{
     flex-direction: column;
     align-items: flex-start;
     margin-top: 18px;
-    min-height: 210px; // Ensures equal height for all cards (adjust as needed)
+    min-height: 210px;
     justify-content: flex-start;
     @media (max-width: 600px) {
         padding: 0 10px;
         min-height: 0;
     }
-    // To push the button to the bottom
     .product-card-btn {
         margin-top: auto;
     }

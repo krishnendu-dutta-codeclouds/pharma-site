@@ -100,16 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }
 
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('click', function (e) {
-            if (
-                e.target.closest('a') ||
-                e.target.tagName === 'BUTTON' ||
-                e.target.closest('button')
-            ) return;
-            window.location.href = 'product.html';
-        });
-    });
+
 
     if (typeof window.gsap !== 'undefined') {
         const cards = document.querySelectorAll('.products-list .product-card');

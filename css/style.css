@@ -1857,15 +1857,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .newsletter-input {
   flex: 1 1 auto;
-  font-size: 18px;
-  padding: 0 18px;
-  height: 48px;
-  border: 1px solid #c0d1d2;
+  font-size: 18px !important;
+  padding: 0 18px !important;
+  height: 48px !important;
+  border: 1px solid #c0d1d2 !important;
   border-radius: 4px 0 0 4px;
-  outline: none;
-  font-family: "Inter", sans-serif;
-  color: #034a4c;
-  background: #fff;
+  outline: none !important;
+  font-family: "Inter", sans-serif !important;
+  color: #034a4c !important;
+  background: #fff !important;
   transition: border 0.2s;
   min-width: 0;
 }
@@ -1894,6 +1894,10 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: background 0.2s;
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 150px;
 }
 .newsletter-btn:hover {
   background: #1a6a6a;
@@ -1964,6 +1968,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 627px;
   margin-bottom: 32px;
   background: none;
+  padding: 0;
 }
 
 .newsletter-input {
@@ -2274,19 +2279,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 380px;
   margin-bottom: 18px;
+  padding: 0;
 }
 
 .footer-newsletter-input {
   flex: 1 1 auto;
-  font-size: 17px;
-  padding: 0 16px;
-  height: 44px;
-  border: none;
+  font-size: 17px !important;
+  padding: 0 16px !important;
+  height: 44px !important;
+  border: none !important;
   border-radius: 4px 0 0 4px;
   outline: none;
-  font-family: "Transducer Test Hairline", Arial, sans-serif;
-  color: #003C3C;
-  background: #fff;
+  font-family: "Transducer Test Hairline", Arial, sans-serif !important;
+  color: #003C3C !important;
+  background: #fff !important;
 }
 .footer-newsletter-input::-moz-placeholder {
   color: #7ca6a6;
@@ -2311,6 +2317,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: background 0.2s;
   letter-spacing: 0.01em;
+  max-width: 110px;
 }
 .footer-newsletter-btn:hover {
   background: #4ee0d6;

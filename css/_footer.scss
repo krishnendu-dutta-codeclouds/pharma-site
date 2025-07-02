@@ -97,19 +97,20 @@
     width: 100%;
     max-width: 380px;
     margin-bottom: 18px;
+    padding: 0;
 }
 
 .footer-newsletter-input {
     flex: 1 1 auto;
-    font-size: 17px;
-    padding: 0 16px;
-    height: 44px;
-    border: none;
+    font-size: 17px!important;
+    padding: 0 16px!important;
+    height: 44px !important;
+    border: none !important;
     border-radius: 4px 0 0 4px;
     outline: none;
-    font-family: $font-main;
-    color: #003C3C;
-    background: #fff;
+    font-family: $font-main !important;
+    color: #003C3C !important;
+    background: #fff !important;
     &::placeholder {
         color: #7ca6a6;
         opacity: 1;
@@ -130,6 +131,7 @@
     cursor: pointer;
     transition: background 0.2s;
     letter-spacing: 0.01em;
+    max-width: 110px;
     &:hover {
         background: #4ee0d6;
     }

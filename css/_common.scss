@@ -17,7 +17,7 @@
     url("https://db.onlinewebfonts.com/t/6e4148ebbc307d42c25263d7517d6420.svg#Transducer Test Medium")format("svg");
 }
 @font-face {
-    font-family: "Transducer Test Hairline";
+    font-family: "Transducer Test Hairline";    
     src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot");
     src: url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.woff2")format("woff2"),
@@ -26,7 +26,6 @@
     url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.svg#Transducer")format("svg");
 }
 
-// Variables
 $primary: #034a4c;
 $primary-dark: #1a6a6a;
 $accent: #00524d;
@@ -38,7 +37,6 @@ $white: #fff;
 $font-main: 'Transducer Test Hairline', Arial, sans-serif;
 $font-body: "Inter", sans-serif;
 
-// Mixins
 @mixin flex-center {
     display: flex;
     align-items: center;
@@ -48,7 +46,6 @@ $font-body: "Inter", sans-serif;
     transition: $props;
 }
 
-// Base/Reset
 :where(html, body) {
     box-sizing: border-box;
     font-family: $font-body;

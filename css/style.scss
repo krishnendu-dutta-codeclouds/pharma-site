@@ -1,7 +1,6 @@
 @import 'common';
 @import 'header';
 
-// Hero Banner
 .hero-banner {
     position: relative;
     min-height: 600px;
@@ -88,7 +87,6 @@
     }
 }
 
-// Testimonial Section
 .testimonial-section {
     background: $white;
     padding: 40px 0;
@@ -169,7 +167,6 @@
     }
 }
 
-// Mobile Menu Overlay (slide from left)
 .mobile-menu-overlay {
     display: none;
     position: fixed;
@@ -313,7 +310,6 @@
     }
 }
 
-// Hide desktop nav and show mobile menu button on mobile
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -333,7 +329,6 @@
     display: none;
 }
 
-// Health Formulas Section
 .container {
     max-width: 1400px;
     width: 100%;
@@ -438,7 +433,6 @@
     }
 }
 
-// Responsive header/menu
 @media (max-width: 900px) {
     .header-inner {
         padding: 0 20px;
@@ -569,7 +563,6 @@
     }
 }
 
-// Studies Section
 .studies-section {
     background: $background;
     padding: 0;
@@ -685,7 +678,6 @@
     }
 }
 
-// Quality Section
 .quality-section {
     background: #f7fafa;
     padding: 0;
@@ -831,7 +823,6 @@
    
 }
 
-// Bestsellers Section
 .bestsellers-section {
     background: $white;
     padding: 64px 0 64px 0;
@@ -1047,7 +1038,6 @@
     
 }
 
-// Global Testimonials Section
 .global-testimonials-section {
     background: #fcfcf8;
     padding: 0;
@@ -1383,7 +1373,6 @@
     }
 }
 
-// CTA Section
 .cta-100-section {
     position: relative;
     width: 100%;
@@ -1489,7 +1478,6 @@
     }
 }
 
-// Newsletter Section
 .newsletter-section {
     background: $white;
     padding: 64px 0 56px 0;
@@ -1524,15 +1512,15 @@
 
 .newsletter-input {
     flex: 1 1 auto;
-    font-size: 18px;
-    padding: 0 18px;
-    height: 48px;
-    border: 1px solid #c0d1d2;
+    font-size: 18px !important;
+    padding: 0 18px !important;
+    height: 48px !important;
+    border: 1px solid #c0d1d2 !important;
     border-radius: 4px 0 0 4px;
-    outline: none;
-    font-family: $font-body;
-    color: $primary;
-    background: $white;
+    outline: none !important;
+    font-family: $font-body !important;
+    color: $primary !important;
+    background: $white !important;
     transition: border 0.2s;
     min-width: 0;
     &::placeholder {
@@ -1557,6 +1545,10 @@
     cursor: pointer;
     transition: background 0.2s;
     letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
     &:hover {
         background: $primary-dark;
     }
@@ -1625,14 +1617,13 @@
 
 
 
-// ...existing code, but REMOVE all header and footer CSS blocks (those are now in _header.scss and _footer.scss)...
-// ...keep all other section styles as before...
 .newsletter-form {
     display: flex;
     width: 100%;
     max-width: 627px;
     margin-bottom: 32px;
     background: none;
+    padding: 0;
 }
 
 .newsletter-input {
@@ -1738,7 +1729,6 @@
 
 
 
-// RND Principles Section
 .rnd-principles-section {
     position: relative;
     width: 100%;
@@ -1848,5 +1838,4 @@
 }
 
 
-// Footer
 @import 'footer';
