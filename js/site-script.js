@@ -77,10 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   if (document.querySelector('.studies-swiper')) {
     new Swiper(".studies-swiper", {
-        slidesPerView: 1.2,
+        slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
-        centeredSlides: false,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
@@ -141,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Unified Accordion with smooth animation for both FAQ and bpc-oral-accordion-list
     function setupSmoothAccordion(containerSelector, itemSelector, questionSelector, answerSelector, openClass = 'open', iconSelector = null) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
@@ -152,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const answer = item.querySelector(answerSelector);
             const icon = iconSelector ? question.querySelector(iconSelector) : null;
             if (question && answer) {
-                // Set initial state
                 if (item.classList.contains(openClass)) {
                     answer.style.maxHeight = answer.scrollHeight + 50 + "px";
                     answer.style.opacity = 1;
@@ -169,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 question.addEventListener('click', function () {
-                    // Close all open items except the one clicked
                     items.forEach(i => {
                         if (i !== item) {
                             i.classList.remove(openClass);
@@ -186,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
 
-                    // Toggle the clicked item
                     const isOpen = item.classList.toggle(openClass);
                     if (isOpen) {
                         answer.style.maxHeight = answer.scrollHeight + 50 + "px";
@@ -208,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // FAQ Section
     setupSmoothAccordion(
         '.faq-section',
         '.faq-item',
@@ -218,7 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
         '.faq-icon'
     );
 
-    // BPC Oral Accordion Section
     setupSmoothAccordion(
         '.bpc-oral-accordion-list',
         '.bpc-oral-accordion-item',

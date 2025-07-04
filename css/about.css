@@ -16,10 +16,10 @@
 :where(html, body) {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  color: #034a4c;
+  color: #3A3129;
   margin: 0;
   padding: 0;
-  background: #f6ffff;
+  background: #fff9ec;
 }
 
 *, *::before, *::after {
@@ -39,9 +39,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #f6ffff;
+  background: #fff9ec;
   font-family: "Inter", sans-serif;
-  color: #034a4c;
+  color: #3A3129;
   box-sizing: border-box;
 }
 
@@ -52,11 +52,19 @@ strong {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Transducer Test Hairline", Arial, sans-serif;
 }
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  color: #B98E5D;
+}
+
+p strong {
+  color: #B98E5D;
+  font-family: "Transducer Test Medium", Arial, sans-serif;
+}
 
 .bestseller-badge {
   display: inline-block;
-  background: #6DD7CF;
-  color: #034a4c;
+  background: #948069;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
   border-radius: 16px;
@@ -70,10 +78,45 @@ h1, h2, h3, h4, h5, h6 {
 .bestseller-badge img {
   width: 20px;
   height: 20px;
+  filter: invert(1) brightness(2.5);
+}
+
+.bestseller-features {
+  margin: 0 0 24px 0;
+  padding: 0 0 0 30px;
+  list-style: disc;
+  color: #3A3129;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-weight: 400;
+}
+.bestseller-features li {
+  margin-bottom: 12px;
+  marker: none;
+  list-style-type: none;
+  position: relative;
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  .bestseller-features li {
+    font-size: 14px;
+  }
+}
+.bestseller-features li::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon-tick.svg) no-repeat center center;
+  background-size: 15px;
+  border-radius: 50%;
 }
 
 .studies-section {
-  background: #f6ffff;
+  background: #fff9ec;
   padding: 0;
 }
 
@@ -83,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   max-width: 100%;
   margin: 0 auto;
-  background: #f7fafa;
+  background: #fff9ec;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -118,11 +161,20 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
 
-.studies-title {
+h2.studies-title {
   font-family: "Transducer Test Hairline", Arial, sans-serif;
   font-size: 40px;
   font-weight: 400;
-  color: #034a4c;
+  color: #3A3129;
+  margin: 0 0 24px 0;
+  line-height: 1.18;
+}
+
+h4.studies-title {
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #3A3129;
   margin: 0 0 24px 0;
   line-height: 1.18;
 }
@@ -130,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 .studies-desc {
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  color: #034a4c;
+  color: #3A3129;
   font-weight: 300;
   line-height: 1.5;
   margin: 0;
@@ -138,11 +190,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1100px) {
-  .studies-title {
+  h2.studies-title {
     font-size: 28px;
-  }
-  .studies-desc {
-    font-size: 16px;
   }
   .studies-text-col {
     padding: 0 20px;
@@ -175,19 +224,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 600px) {
-  .studies-title {
+  h2.studies-title {
     font-size: 24px;
     margin-bottom: 16px;
   }
   .studies-desc {
-    font-size: 14px;
+    font-size: 16px;
   }
   .studies-text-col {
     padding: 24px 20px 0 20px;
   }
 }
 .quality-section {
-  background: #f7fafa;
+  background: #fff9ec;
   padding: 0;
 }
 
@@ -207,28 +256,48 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   padding: 40px 6vw 40px 6vw;
-  background: #f7fafa;
+  background: #fff9ec;
   text-align: left;
 }
 
-.quality-title {
+h2.quality-title {
   font-family: "Transducer Test Medium", Arial, sans-serif;
   font-size: 40px;
   font-weight: 400;
-  color: #034a4c;
+  color: #3A3129;
   margin: 0 0 28px 0;
   line-height: 1.18;
 }
-.quality-title .underline {
+h2.quality-title .underline {
   border-bottom: 2px solid #003C3C;
   display: inline-block;
   padding-bottom: 2px;
 }
 
+h4.quality-title {
+  font-family: "Transducer Test Hairline", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #3A3129;
+  margin: 0 0 28px 0;
+  line-height: 150%;
+}
+h4.quality-title .underline {
+  border-bottom: 2px solid #003C3C;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+@media (max-width: 1100px) {
+  h4.quality-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
 .quality-sub {
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  color: #034a4c;
+  color: #3A3129;
   font-weight: 300;
   margin: 0 0 32px 0;
   line-height: 1.5;
@@ -240,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
 .quality-highlight {
   font-family: "Transducer Test Medium", Arial, sans-serif;
   font-size: 40px;
-  color: #034a4c;
+  color: #3A3129;
   font-weight: 400;
   margin: 0 0 32px 0;
   line-height: 120%;
@@ -249,7 +318,7 @@ h1, h2, h3, h4, h5, h6 {
 .quality-desc {
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  color: #034a4c;
+  color: #3A3129;
   font-weight: 300;
   line-height: 150%;
   margin: 0;
@@ -288,8 +357,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 900px) {
   .quality-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     min-height: 0;
+    margin-top: 50px;
   }
   .quality-image-col,
   .quality-text-col {
@@ -327,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .main-header {
-  background: linear-gradient(135deg, rgba(231, 255, 253, 0.4), rgba(231, 255, 253, 0.4));
+  background: linear-gradient(135deg, rgb(255, 249, 237), rgba(185, 142, 93, 0.09));
   border-bottom: 1px solid #d9e4e4;
   padding: 0;
   position: sticky;
@@ -337,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid #7da4a5;
+  border-bottom: 1px solid #3A3129;
 }
 
 .header-inner {
@@ -355,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 0.02em;
-  color: #034a4c;
+  color: #3A3129;
   font-family: "Transducer Test Hairline", Arial, sans-serif;
 }
 .header-left .logo img {
@@ -374,20 +444,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-nav a {
   text-decoration: none;
-  color: #034a4c;
+  color: #3A3129;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.01em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 .header-nav a:hover {
-  color: #1a6a6a;
+  color: #948069;
 }
 
 .header-divider {
   width: 1px;
   height: 36px;
-  background: #b8d3d3;
+  background: #948069;
   margin: 0 20px 0;
 }
 
@@ -401,29 +472,33 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   font-size: 15px;
-  color: #034a4c;
+  color: #3A3129;
   gap: 6px;
 }
 .currency-country .divider {
   margin: 0 4px;
-  color: #b8d3d3;
+  color: rgba(185, 142, 93, 0.4196078431);
 }
 .currency-country .dropdown {
   font-size: 12px;
   margin-left: 4px;
-  color: #034a4c;
+  color: #3A3129;
 }
 
 .login-link {
   text-decoration: none;
-  color: #034a4c;
+  color: #fff;
   font-size: 15px;
   font-weight: 400;
   margin-left: 8px;
+  padding: 8px 20px;
+  border-radius: 24px;
+  background: #B98E5D;
+  display: block;
   transition: color 0.2s;
 }
 .login-link:hover {
-  color: #1a6a6a;
+  background: #3A3129;
 }
 
 .cart-btn {
@@ -452,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
 }
 .mobile-menu-overlay .mobile-menu-panel {
-  background: #034a4c;
+  background: #3A3129;
   width: 100vw;
   transform: translateX(-100vw);
   height: 100vh;
@@ -485,19 +560,20 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 17px 20px 18px 20px;
-  background: #f6ffff;
+  background: #fff9ec;
   border-bottom: 1px solid #d9e4e4;
 }
 .mobile-menu-header .logo {
-  color: #034a4c;
+  color: #3A3129;
   font-size: 26px;
   font-weight: 700;
   font-family: "Transducer Test Hairline", Arial, sans-serif;
   letter-spacing: 0.02em;
-  max-width: 210px;
+  display: block;
 }
 .mobile-menu-header .logo img {
   display: block;
+  max-width: 150px;
 }
 .mobile-menu-header .mobile-menu-icons {
   display: flex;
@@ -591,6 +667,14 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+@media (max-width: 1100px) {
+  .header-left .logo img {
+    max-width: 160px;
+  }
+  .header-nav a {
+    font-size: 12px;
+  }
+}
 @media (max-width: 900px) {
   .header-inner {
     padding: 0 20px;
@@ -801,8 +885,65 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Transducer Test Medium", Arial, sans-serif;
 }
 
+.level-up-section {
+  background: #f2f6f6;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.level-up-content {
+  text-align: center;
+  width: 100%;
+}
+
+.level-up-description {
+  color: #3A3129;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.level-up-title {
+  color: #3A3129;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.level-up-btn {
+  background: #8fd2cd;
+  color: #3A3129;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 12px 24px 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: none;
+  transition: background 0.2s;
+}
+.level-up-btn:hover {
+  background: #7cc3c1;
+}
+
+.level-up-btn-arrow {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 0.2rem;
+  transform: translateY(1px);
+}
+
 .site-footer {
-  background: #034a4c;
+  background: rgba(185, 142, 93, 0.4196078431);
   color: #eaf6f6;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -814,7 +955,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 24px 10px;
+  padding: 40px 24px 40px;
   display: flex;
   flex-direction: column;
   min-height: 100px;
@@ -825,7 +966,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   gap: 48px;
   padding: 0 0 0 0;
-  border-bottom: 1px solid #4a8686;
 }
 
 .footer-brand-col {
@@ -855,7 +995,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-disclaimer {
   font-size: 15px;
-  color: #9eb8b8;
+  color: #fff;
   opacity: 0.8;
   margin-bottom: 18px;
   line-height: 1.5;
@@ -863,12 +1003,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-contact {
   font-size: 15px;
-  color: #9eb8b8;
+  color: #fff;
   opacity: 0.95;
   margin-bottom: 0;
 }
 .footer-contact a {
-  color: #9eb8b8;
+  color: #fff;
   font-weight: 600;
   text-decoration: underline;
 }
@@ -885,14 +1025,14 @@ h1, h2, h3, h4, h5, h6 {
 .footer-connect-title {
   font-size: 26px;
   font-weight: 700;
-  color: #eaf6f6;
+  color: #fff;
   margin-bottom: 10px;
   letter-spacing: 0.01em;
 }
 
 .footer-connect-sub {
   font-size: 16px;
-  color: #9eb8b8;
+  color: #fff;
   opacity: 0.95;
   margin-bottom: 12px;
 }
@@ -914,15 +1054,15 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px 0 0 4px;
   outline: none;
   font-family: "Transducer Test Hairline", Arial, sans-serif !important;
-  color: #003C3C !important;
+  color: #3A3129 !important;
   background: #fff !important;
 }
 .footer-newsletter-input::-moz-placeholder {
-  color: #7ca6a6;
+  color: #3A3129;
   opacity: 1;
 }
 .footer-newsletter-input::placeholder {
-  color: #7ca6a6;
+  color: #3A3129;
   opacity: 1;
 }
 
@@ -930,8 +1070,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Transducer Test Hairline", Arial, sans-serif;
   font-size: 17px;
   font-weight: 600;
-  color: #165b5b;
-  background: #7fd6cd;
+  color: #fff;
+  background: #948069;
   border: none;
   border-radius: 0 4px 4px 0;
   padding: 0 15px;
@@ -957,11 +1097,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background: none;
   border: none;
   padding: 0;
+  fill: #fff;
 }
 .footer-social-icon img {
   width: 24px;
@@ -977,9 +1118,8 @@ h1, h2, h3, h4, h5, h6 {
 .footer-links-col {
   flex: 1 1 70%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex-direction: row;
-  gap: 64px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 32px;
   align-items: flex-start;
   justify-content: flex-end;
   margin-bottom: 32px;
@@ -993,21 +1133,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   flex: 1;
 }
-.footer-links-group.footer-links-group-policy {
-  margin-top: 0;
-}
 
 .footer-links-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
-  color: #eaf6f6;
-  margin-bottom: 10px;
+  color: #fff;
+  margin-bottom: 16px;
   letter-spacing: 0.01em;
+}
+.footer-links-title ~ .footer-links-title {
+  margin-top: 24px;
 }
 
 .footer-links-group a {
-  color: #9eb8b8;
-  font-size: 14px;
+  color: #fff;
+  font-size: 17px;
   text-decoration: none;
   opacity: 0.85;
   margin-bottom: 10px;
@@ -1023,10 +1163,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #4a8686;
+  border-top: 1px solid #948069;
   padding: 16px 0 8px 0;
   font-size: 15px;
-  color: #9eb8b8;
+  color: #fff;
   opacity: 0.85;
   margin-top: 0;
 }
@@ -1039,7 +1179,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 .footer-bottom-right a {
-  color: #9eb8b8;
+  color: #fff;
   text-decoration: none;
   opacity: 0.85;
 }
@@ -1056,10 +1196,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer-links-col {
     grid-template-columns: repeat(2, 1fr);
-    flex: none;
-    flex-direction: row;
-    gap: 32px;
-    justify-content: flex-start;
+    gap: 32px 24px;
     margin-bottom: 0;
     margin: 0;
   }
@@ -1083,40 +1220,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0;
   }
   .footer-links-col {
+    grid-template-columns: 1fr;
     gap: 18px;
     margin-bottom: 0;
     margin-top: 0;
   }
-  .footer-links-group {
-    min-width: 0;
-    margin-bottom: 0;
-  }
-  .footer-links-group-policy {
-    margin-top: 18px;
-  }
-  .footer-logo {
-    font-size: 36px;
-    margin-bottom: 0;
-  }
-  .footer-connect-title {
-    font-size: 20px;
-  }
-  .footer-newsletter-form {
-    max-width: 100%;
-  }
-  .footer-newsletter-input,
-  .footer-newsletter-btn {
-    font-size: 15px;
-    height: 38px;
-  }
-  .footer-newsletter-btn {
-    padding: 0 16px;
-  }
   .footer-links-title {
-    font-size: 15px;
+    font-size: 18px;
   }
   .footer-links-group a {
-    font-size: 14px;
+    font-size: 15px;
   }
   .footer-bottom {
     font-size: 13px;
@@ -1132,6 +1245,32 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 18px;
     padding: 0 0 0 0;
+  }
+  .footer-brand-col,
+  .footer-connect-col,
+  .footer-links-col {
+    flex: none;
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+  }
+  .footer-links-col {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+  .footer-links-title {
+    font-size: 15px;
+  }
+  .footer-links-group a {
+    font-size: 13px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    padding: 8px 0 4px 0;
   }
   .footer-brand-col,
   .footer-connect-col,

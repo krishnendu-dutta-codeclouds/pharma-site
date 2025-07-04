@@ -1,5 +1,5 @@
 .main-header {
-    background:linear-gradient(135deg, rgba(231, 255, 253, 0.4), rgba(231, 255, 253, 0.4));
+    background:linear-gradient(135deg, rgb(255 249 237), rgb(185 142 93 / 9%));
     border-bottom: 1px solid $border;
     padding: 0;
     position: sticky;
@@ -9,7 +9,7 @@
     z-index: 1000;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom:1px solid #7da4a5;
+    border-bottom:1px solid $primary;
 }
 
 .header-inner {
@@ -50,6 +50,7 @@
         font-weight: 500;
         font-size: 15px;
         letter-spacing: 0.01em;
+        text-transform: uppercase;
         @include transition(color 0.2s);
 
         &:hover {
@@ -61,7 +62,7 @@
 .header-divider {
     width: 1px;
     height: 36px;
-    background: #b8d3d3;
+    background: $primary-dark;
     margin: 0 20px 0;
 }
 
@@ -90,14 +91,18 @@
 
 .login-link {
     text-decoration: none;
-    color: $primary;
+    color: $white;
     font-size: 15px;
     font-weight: 400;
     margin-left: 8px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    background: $accent;
+    display: block;
     @include transition(color 0.2s);
 
     &:hover {
-        color: $primary-dark;
+        background: $primary;
     }
 }
 
@@ -170,9 +175,10 @@
         font-weight: 700;
         font-family: $font-main;
         letter-spacing: 0.02em;
-        max-width: 210px;
+        display: block;
         img{
             display: block;
+            max-width: 150px;
         }
     }
 
@@ -272,7 +278,12 @@
 .mobile-cart {
     display: none;
 }
-
+@media (max-width: 1100px) {
+    .header-left {.logo {img{
+        max-width: 160px;
+    }}}
+    .header-nav{a{font-size: 12px;}}
+}
 @media (max-width: 900px) {
     .header-inner {
         padding: 0 20px;

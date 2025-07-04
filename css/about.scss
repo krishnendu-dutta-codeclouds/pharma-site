@@ -168,6 +168,63 @@
     }
 }
 
+.level-up-section {
+  background: #f2f6f6;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.level-up-content {
+  text-align: center;
+  width: 100%;
+}
+
+.level-up-description {
+  color: $primary;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.level-up-title {
+  color: $primary;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.level-up-btn {
+  background: #8fd2cd;
+  color: $primary;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 12px 24px 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: none;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #7cc3c1;
+  }
+}
+
+.level-up-btn-arrow {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 0.2rem;
+  transform: translateY(1px);
+}
 
 
 @import 'footer';

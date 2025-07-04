@@ -20,7 +20,7 @@ main{
     .products-title {
         font-family: 'Transducer Test Medium', Arial, sans-serif;
         font-size: 48px;
-        color: #034a4c;
+        color: $primary;
         margin: 0 0 8px 0;
         letter-spacing: 0.01em;
         line-height: 1.1;
@@ -29,7 +29,7 @@ main{
     .products-subtitle {
         font-family: "Inter", sans-serif;
         font-size: 20px;
-        color: #034a4c;
+        color: $primary;
         margin: 0 0 32px 0;
         font-weight: 400;
     }
@@ -92,9 +92,9 @@ main{
 
     &:hover,
     &:focus-within {
-        box-shadow: 0 8px 32px 0 rgba(0,60,60,0.13), 0 1.5px 6px 0 rgba(0,60,60,0.07);
+        box-shadow:0 8px 32px 0 rgb(148 129 105 / 40%), 0 1.5px 6px 0 rgb(196 182 164 / 17%);
         transform: translateY(-6px) scale(1.025);
-        background: #f4fcfc;
+        background: $background;
 
         .product-card-image-wrap {
             filter: brightness(1.04) drop-shadow(0 2px 12px #00999922);
@@ -102,7 +102,7 @@ main{
         }
 
         .product-card-btn {
-            background: #009999;
+            background: $primary;
             color: #fff;
             box-shadow: 0 2px 8px 0 rgba(0,153,153,0.07);
         }
@@ -112,7 +112,7 @@ main{
 .product-card-image-wrap {
     width: 100%;
     min-height: 340px;
-    background: #f5f9f9;
+    background: #fff;
     border-radius: 12px 12px 0 0;
     display: flex;
     align-items: flex-end;
@@ -125,7 +125,7 @@ main{
         top: 18px;
         left: 18px;
         background: #e6fcfa;
-        color: #009999;
+        color: $primary;
         font-size: 16px;
         font-weight: 600;
         border-radius: 16px;
@@ -169,7 +169,7 @@ main{
 .product-card-title {
     font-family: 'Transducer Test Medium', Arial, sans-serif;
     font-size: 17px;
-    color: #034a4c;
+    color: $primary;
     margin: 0 0 6px 0;
     font-weight: 700;
     line-height: 1.2;
@@ -178,7 +178,7 @@ main{
 .product-card-desc {
     font-family: "Inter", sans-serif;
     font-size: 13px;
-    color: #034a4c;
+    color: $primary;
     margin: 5px 0 20px 0;
     font-weight: 400;
     line-height: 1.4;
@@ -194,9 +194,9 @@ main{
     .product-card-price {
         font-family: "Inter", sans-serif;
         font-size: 15px;
-        color: #034a4c;
+        color: $primary;
         font-weight: 600;
-        border: 1.5px solid #009999;
+        border: 1.5px solid $primary;
         border-radius: 24px;
         padding: 4px 12px;
         background: #fff;
@@ -205,7 +205,7 @@ main{
     .product-card-rating {
         font-family: "Inter", sans-serif;
         font-size: 15px;
-        color: #009999;
+        color: $primary;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -213,12 +213,12 @@ main{
         .product-rating-value {
             margin-left: 2px;
             font-weight: 700;
-            color: #009999;
+            color: $primary;
             font-size: 15px;
         }
         .product-rating-count {
             margin-left: 2px;
-            color: #034a4c;
+            color: $primary;
             font-weight: 400;
             font-size: 15px;
         }
@@ -233,7 +233,7 @@ main{
 .product-card-btn {
     width: 100%;
     display: block;
-    background: #034a4c;
+    background: $primary;
     color: #fff;
     font-size: 15px;
     font-weight: 600;
@@ -248,7 +248,7 @@ main{
     box-shadow: none;
     font-family: "Inter", sans-serif;
     &:hover {
-        background: #009999;
+        background: $primary;
     }
 }
 

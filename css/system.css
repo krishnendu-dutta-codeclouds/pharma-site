@@ -723,6 +723,33 @@ h4.quality-title .underline {
     display: flex;
   }
 }
+.system {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.system .system-header {
+  padding: 50px 0;
+  font-size: 48px;
+  line-height: 150%;
+  font-family: "Transducer Test Medium", Arial, sans-serif;
+}
+.system .system-content {
+  padding: 0 0 50px;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.social a {
+  text-decoration: none;
+  margin: 0 5px;
+}
+.social a svg {
+  width: 26px;
+  height: 26px;
+  fill: #3A3129;
+}
+
 .site-footer {
   background: rgba(185, 142, 93, 0.4196078431);
   color: #eaf6f6;
@@ -1109,284 +1136,4 @@ h4.quality-title .underline {
     font-size: 11px;
     padding: 8px 0 4px 0;
   }
-}
-main {
-  background-color: #fff;
-}
-
-.products-hero {
-  padding-top: 48px;
-  padding-bottom: 0;
-  text-align: left;
-}
-.products-hero .products-hero-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-@media (max-width: 900px) {
-  .products-hero .products-hero-inner {
-    padding-left: 20px;
-  }
-}
-.products-hero .products-title {
-  font-family: "Transducer Test Medium", Arial, sans-serif;
-  font-size: 48px;
-  color: #3A3129;
-  margin: 0 0 8px 0;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
-}
-.products-hero .products-subtitle {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  color: #3A3129;
-  margin: 0 0 32px 0;
-  font-weight: 400;
-}
-
-.products-list-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: #fff;
-  min-height: 60vh;
-  padding-bottom: 60px;
-}
-
-.products-list-container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30px 0;
-}
-
-.products-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 48px;
-  margin-top: 32px;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-}
-@media (max-width: 1200px) {
-  .products-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-}
-@media (max-width: 700px) {
-  .products-list {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
-
-.product-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-width: 0;
-  max-width: 100%;
-  padding: 0 0 32px 0;
-  position: relative;
-  flex: 0 0 370px;
-  transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, box-shadow;
-  cursor: pointer;
-}
-.product-card a.product-card-btn {
-  pointer-events: none;
-}
-.product-card:hover, .product-card:focus-within {
-  box-shadow: 0 8px 32px 0 rgba(148, 129, 105, 0.4), 0 1.5px 6px 0 rgba(196, 182, 164, 0.17);
-  transform: translateY(-6px) scale(1.025);
-  background: #fff9ec;
-}
-.product-card:hover .product-card-image-wrap, .product-card:focus-within .product-card-image-wrap {
-  filter: brightness(1.04) drop-shadow(0 2px 12px rgba(0, 153, 153, 0.1333333333));
-  transition: filter 0.22s;
-}
-.product-card:hover .product-card-btn, .product-card:focus-within .product-card-btn {
-  background: #3A3129;
-  color: #fff;
-  box-shadow: 0 2px 8px 0 rgba(0, 153, 153, 0.07);
-}
-
-.product-card-image-wrap {
-  width: 100%;
-  min-height: 340px;
-  background: #fff;
-  border-radius: 12px 12px 0 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-  padding-top: 32px;
-  padding-bottom: 16px;
-}
-.product-card-image-wrap .product-badge {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  background: #e6fcfa;
-  color: #3A3129;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 16px;
-  padding: 4px 18px;
-  z-index: 2;
-  font-family: "Inter", sans-serif;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
-}
-.product-card-image-wrap .product-image {
-  max-width: 260px;
-  max-height: 340px;
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 0;
-  background: transparent;
-  z-index: 1;
-}
-
-.product-card-info {
-  width: 100%;
-  padding: 0 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 18px;
-  min-height: 210px;
-  justify-content: flex-start;
-}
-@media (max-width: 600px) {
-  .product-card-info {
-    padding: 0 10px;
-    min-height: 0;
-  }
-}
-.product-card-info .product-card-btn {
-  margin-top: auto;
-}
-
-.product-card-title {
-  font-family: "Transducer Test Medium", Arial, sans-serif;
-  font-size: 17px;
-  color: #3A3129;
-  margin: 0 0 6px 0;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.product-card-desc {
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
-  color: #3A3129;
-  margin: 5px 0 20px 0;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-.product-card-meta {
-  width: 100%;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.product-card-meta .product-card-price {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  color: #3A3129;
-  font-weight: 600;
-  border: 1.5px solid #3A3129;
-  border-radius: 24px;
-  padding: 4px 12px;
-  background: #fff;
-  display: inline-block;
-}
-.product-card-meta .product-card-rating {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  color: #3A3129;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.product-card-meta .product-card-rating .product-rating-value {
-  margin-left: 2px;
-  font-weight: 700;
-  color: #3A3129;
-  font-size: 15px;
-}
-.product-card-meta .product-card-rating .product-rating-count {
-  margin-left: 2px;
-  color: #3A3129;
-  font-weight: 400;
-  font-size: 15px;
-}
-.product-card-meta .product-card-rating svg {
-  margin-right: 1px;
-  width: 15px;
-  height: 15px;
-}
-
-.product-card-btn {
-  width: 100%;
-  display: block;
-  background: #3A3129;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 10px 0;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 6px;
-  letter-spacing: 0.01em;
-  border: none;
-  transition: background 0.2s;
-  box-shadow: none;
-  font-family: "Inter", sans-serif;
-}
-.product-card-btn:hover {
-  background: #3A3129;
-}
-
-.product-badge,
-.product-card-bubble {
-  font-size: 12px !important;
-  padding: 3px 10px !important;
-}
-
-@media (max-width: 900px) {
-  .products-hero .products-title {
-    font-size: 32px;
-  }
-  .products-hero .products-subtitle {
-    font-size: 16px;
-  }
-  .product-card {
-    min-width: 0;
-    max-width: 100vw;
-  }
-}
-.bestseller-badge {
-  position: absolute;
-  top: 15px;
-  z-index: 2;
-  left: 15px;
-  color: #fff;
-}
-.bestseller-badge img {
-  filter: invert(1) brightness(2.5);
-}/*# sourceMappingURL=our-products.css.map */
+}/*# sourceMappingURL=system.css.map */

@@ -26,12 +26,12 @@
     url("https://db.onlinewebfonts.com/t/b98274cf1aeab4d9c747ab0512a49fe9.svg#Transducer")format("svg");
 }
 
-$primary: #034a4c;
-$primary-dark: #1a6a6a;
-$accent: #00524d;
-$background: #f6ffff;
+$primary: #3A3129;
+$primary-dark: #948069;
+$accent: #B98E5D;
+$background: #fff9ec;
 $border: #d9e4e4;
-$divider: #b8d3d3;
+$divider: #B98E5D6B;
 $star: #FFD600;
 $white: #fff;
 $font-main: 'Transducer Test Hairline', Arial, sans-serif;
@@ -82,13 +82,22 @@ strong {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Transducer Test Hairline', Arial, sans-serif;
+    strong{
+        color: $accent;
+    }
+}
+p{
+    strong{
+        color: $accent;
+        font-family: 'Transducer Test Medium', Arial, sans-serif;
+    }
 }
 
 
 .bestseller-badge {
     display: inline-block;
-    background: #6DD7CF;
-    color: $primary;
+    background: $primary-dark;
+    color: $white;
     font-size: 14px;
     font-weight: 600;
     border-radius: 16px;
@@ -100,7 +109,41 @@ h1, h2, h3, h4, h5, h6 {
     img{
         width: 20px;
         height: 20px;
+        filter: invert(1) brightness(2.5);
     }
+}
+
+.bestseller-features {
+    margin: 0 0 24px 0;
+    padding: 0 0 0 30px;
+    list-style: disc;
+    color: $primary;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-main;
+    font-weight: 400;
+    li{
+    margin-bottom: 12px;
+    marker: none;
+    list-style-type: none;
+    position: relative;
+    font-size: 18px;
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: -29px;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+        background: url(../images/icon-tick.svg) no-repeat center center;
+        background-size: 15px;
+        border-radius: 50%;
+    }
+}
+    
 }
 
 
@@ -116,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     max-width: 100%;
     margin: 0 auto;
-    background: #f7fafa;
+    background: $background;
     @include flex-center;
     flex-direction: row;
     padding: 0;
@@ -149,9 +192,17 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
-.studies-title {
+h2.studies-title {
     font-family: $font-main;
     font-size: 40px;
+    font-weight: 400;
+    color: $primary;
+    margin: 0 0 24px 0;
+    line-height: 1.18;
+}
+h4.studies-title {
+    font-family: $font-main;
+    font-size: 36px;
     font-weight: 400;
     color: $primary;
     margin: 0 0 24px 0;
@@ -169,12 +220,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1100px) {
-    .studies-title {
+    h2.studies-title {
         font-size: 28px;
     }
-    .studies-desc {
-        font-size: 16px;
-    }
+
     .studies-text-col {
         padding: 0 20px;
     }
@@ -208,12 +257,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 600px) {
-    .studies-title {
+    h2.studies-title {
         font-size: 24px;
         margin-bottom: 16px;
     }
     .studies-desc {
-        font-size: 14px;
+        font-size: 16px;
     }
     .studies-text-col {
         padding: 24px 20px 0 20px;
@@ -221,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .quality-section {
-    background: #f7fafa;
+    background: $background;
     padding: 0;
 }
 
@@ -241,11 +290,11 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     padding: 40px 6vw 40px 6vw;
-    background: #f7fafa;
+    background: $background;
     text-align: left;
 }
 
-.quality-title {
+h2.quality-title {
     font-family: "Transducer Test Medium", Arial, sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -257,6 +306,26 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom: 2px solid #003C3C;
         display: inline-block;
         padding-bottom: 2px;
+    }
+}
+
+h4.quality-title {
+    font-family: $font-main;
+    font-size: 28px;
+    font-weight: 400;
+    color: $primary;
+    margin: 0 0 28px 0;
+    line-height: 150%;
+
+    .underline {
+        border-bottom: 2px solid #003C3C;
+        display: inline-block;
+        padding-bottom: 2px;
+    }
+
+    @media (max-width: 1100px) {
+        font-size: 20px;
+        margin-bottom: 16px;
     }
 }
 
@@ -324,8 +393,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 900px) {
     .quality-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         min-height: 0;
+        margin-top: 50px;
     }
     .quality-image-col,
     .quality-text-col {
